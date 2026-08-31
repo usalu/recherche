@@ -1,0 +1,1082 @@
+[
+  {
+    "page": 3,
+    "table": 1,
+    "rows": [
+      [
+        "The ReCreate project explores the possibilities of deconstructing and"
+      ],
+      [
+        "reusing precast concrete elements from end-of-life buildings that were"
+      ],
+      [
+        "not originally designed for disassembly. This report outlines a"
+      ],
+      [
+        "database"
+      ]
+    ]
+  },
+  {
+    "page": 11,
+    "table": 1,
+    "rows": [
+      [
+        "",
+        ""
+      ]
+    ]
+  },
+  {
+    "page": 11,
+    "table": 2,
+    "rows": [
+      [
+        "Deconstruction Data\n+Num_Facades : int\n+Num_Int_Walls : int\n+Num_Columns : int\n+Num_Beams : int\n+Num_HCS : int\n+Num_Solid_Slabs : int",
+        null
+      ],
+      [
+        "",
+        ""
+      ]
+    ]
+  },
+  {
+    "page": 11,
+    "table": 3,
+    "rows": [
+      [
+        "Corbel Geometry"
+      ],
+      [
+        "+Product_ID : String\n+Count : int\n+Extruded_Plane : String\n+FCS_XZ_rad : list<Vector3D>\n+FCS_Rad : list<float>\n+SCS_YZ_rad : list<Vector3D>\n+SCS_Rad : list<float>\n+PCS_XY_rad : list<Vector3D>\n+PCS_Rad : list<float>"
+      ]
+    ]
+  },
+  {
+    "page": 11,
+    "table": 4,
+    "rows": [
+      [
+        null,
+        null,
+        null,
+        null,
+        "Beam Geometry\n+Product_ID : String\n+Reinf_ID : String\n+Mirrored_Design : bool\n+Count : int\n+FCS_XZ : list<Vector3D>\n+FCS_Rad_Bev : list<float>\n+SCS_YZ : list<Vector3D>\n+SCS_Rad_Bev : list<float>\n+PCS_XY : list<Vector3D>\n+PCS_Rad_Bev : list<float>\n+Strength_Class : String\n+Agg_Size : int\n+Concrete_Type : String\n+Notes : String 1",
+        null,
+        null,
+        null,
+        null,
+        null,
+        "Column Geometry\n+Product_ID : String\n+Reinf_ID : String\n+Cross_Section : String\n+Count : int\n+FCS_XZ : list<Vector3D>\n+FCS_Rad_Bev : list<float>\n+SCS_YZ : list<Vector3D>\n+SCS_Rad_Bev : list<float>\n+PCS_XY : list<Vector3D>\n+PCS_Rad_Bev : list<float>\n+Strength_Class : String\n+Agg_Size : int\n+Concrete_Type : String\n+Notes : String 1",
+        "Column Connections\n+Count : int\n1HasC o n nect+ + L D o e c p a t h t i o : n in _ t X Z Y : V e c to r 3 D\n0 . .* + + D C i o a n m n e e t c e t i r o : n i _ n T t y p e : S tr i n g\n+Notes : String",
+        "",
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        "",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        "",
+        "ZoneAnchorage\n0..*\nBeam Lon D g. e R si e g i n nforcement 1\n+Reinf_ID : int\n+Zone_ID : String\nLayerAnchorage +Zone_Plane : String",
+        null,
+        null,
+        "11....**+ + R D a i a d m i u e s t e : r fl : o i a n t t 11....**\nZoneAnchorage + + S N p u m a c _ i n P g i n : s i n : t i n t ZoneA nchorage\n+Pinned_Span : String\n+Notes : String",
+        null,
+        null,
+        null,
+        null,
+        null,
+        "e",
+        null
+      ],
+      [
+        null,
+        null,
+        "",
+        "+ + Z Z o o n n e e _ _ H V_ _ C C o o o o r r d d s s : : V V e e c c t t o o r r 2 2 D D L\n+Layer_ID : int\n+Concrete_Cover_xzy : Vector3D\n+Layer_H_Coords : Vector2D\n+Layer_V_Coords : Vector2D\n+Layer_Position : float\n+Num_Bars : int\n+Bar_Diameter : int\n+Bar_Spacing : int\n+Steel_Grade : String\n+Notes : String\n1..*\n0..*\nBeam Transv. Reinforcement\nDesign\nSteelMatProps +Reinf_ID : String",
+        "+Zone_H_Coords : Vector2D\n+Zone_V_Coords : Vector2D\n+Layer_ID : int\n+Concrete_Cover_xzy : Vector3D\n+Layer_H_Coords : Vector2D\n+Layer_V_Coords : Vector2D\n+Layer_Position : float\n+Num_Bars : int\n+Bar_Diameter : int\n+Bar_Spacing : int\n+Steel_Grade : String\n+Notes : String",
+        "L",
+        "ayerAnchorage",
+        "Layer Anchorage",
+        "LayerAnchorage",
+        "",
+        "+Zone_H_Coords : Vector2D\n+Zone_V_Coords : Vector2D\n+Layer_ID : int\n+Concrete_Cover_xzy : Vector3D\n+Layer_H_Coords : Vector2D\n+Layer_V_Coords : Vector2D\n+Layer_Position : float\n+Num_Bars : int\n+Bar_Diameter : int\n+Bar_Spacing : int\n+Steel_Grade : String\n+Notes : String",
+        null,
+        "",
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        "+ A n c h o ra g e _ T y p e : S tr i n g\n+ B e n t_ A n g le : li st < V ec t o r 2D>\n+Hooked_Length : list<Vector2D>\n+Notes : String\nSteelMatProps SteelMatProps\nSteel Material Properties\nLibrary",
+        "+Anchorage_Type : String\n+Bent_Angle : list<Vector2D>\n+Hooked_Length : list<Vector2D>\n+Notes : String",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        "Steel Material Properties\nLibrary",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        "Design\n+Reinf_ID : String\n+Zone_ID : String\n+Description : String\n+Bar_Diameter : int\n+Spacing : int\n+Num_Bends : int\n+Bent_Plane : String\n+Bent_Angle : float\n+Shape_xzy : list<Vector3D>\n+Span_Axis : String\n+Span_Position : Vector2D\n+Steel_Grade : String\n+Notes : String",
+        null,
+        null,
+        null,
+        "Beam Transv. Reinforcement\nDesign\n+Reinf_ID : String",
+        null,
+        "",
+        "+Steel_Grade : String\n+Original_Standard : String\n+Publication_Year : int\n+Country : String\n+fyk : int\n+fsu : int\n+Elastic_Modulus : float\n+Ultimate_Strain : float\n+Fracture_Strain : float\n+Measurement_Length : float\n+Ductility_Class : String\n+Surface_Profile : String\n+Notes : String",
+        "",
+        null,
+        "Column Transv. Reinforcement\nDesign\n+Reinf_ID : String",
+        null,
+        null,
+        "Slab Transv. Reinforcement\nDesign\n+Reinf_ID : String\n+Zone_ID : String\n+Description : String\n+Bar_Diameter : int\n+Spacing : int\n+Num_Bends : int\n+Bent_Plane : String\n+Bent_Angle : float\n+Shape_xzy : list<Vector3D>\n+Span_Axis : String\n+Span_Position : Vector2D\n+Steel_Grade : String\n+Notes : String"
+      ],
+      [
+        null,
+        null,
+        "",
+        "SteelMatProps",
+        "+Zone_ID : String\n+Description : String\n+Bar_Diameter : int\n+Spacing : int\n+Num_Bends : int\n+Bent_Plane : String\n+Bent_Angle : float",
+        "SteelM",
+        "atProps",
+        null,
+        "SteelMat",
+        "Props",
+        "+Zone_ID : String\n+Description : String\n+Bar_Diameter : int\n+Spacing : int\n+Num_Bends : int\n+Bent_Plane : String\n+Bent_Angle : float",
+        "SteelM",
+        "atProps",
+        null
+      ],
+      [
+        null,
+        "",
+        null,
+        "",
+        "+Shape_xzy : list<Vector3D>\n+Span_Axis : String\n+Span_Position : Vector2D\n+Steel_Grade : String\n+Notes : String",
+        "",
+        null,
+        null,
+        null,
+        "",
+        "+Shape_xzy : list<Vector3D>\n+Span_Axis : String\n+Span_Position : Vector2D\n+Steel_Grade : String\n+Notes : String",
+        "",
+        "",
+        null
+      ]
+    ]
+  },
+  {
+    "page": 20,
+    "table": 1,
+    "rows": [
+      [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "",
+        "",
+        "a",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "b",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "",
+        "c",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "d",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    ]
+  },
+  {
+    "page": 21,
+    "table": 1,
+    "rows": [
+      [
+        "y\n₁, y₁)",
+        "(x₂, y"
+      ],
+      [
+        "",
+        ""
+      ]
+    ]
+  },
+  {
+    "page": 21,
+    "table": 2,
+    "rows": [
+      [
+        "y",
+        "(0, b)"
+      ],
+      [
+        "",
+        ""
+      ]
+    ]
+  },
+  {
+    "page": 25,
+    "table": 1,
+    "rows": [
+      [
+        "Constraint"
+      ],
+      [
+        "Not Null\nNot Null"
+      ]
+    ]
+  },
+  {
+    "page": 29,
+    "table": 1,
+    "rows": [
+      [
+        "Constraint"
+      ],
+      [
+        "Not Null\nNot Null\nNot Null\nNot Null\nNot Null\nNot Null\nNot Null\nNot Null\nNot Null\nNot Null\nNot Null\nNull\nNull\nNull"
+      ]
+    ]
+  },
+  {
+    "page": 30,
+    "table": 1,
+    "rows": [
+      [
+        "Constraint"
+      ],
+      [
+        "Not Null\nNot Null\nNull\nNull"
+      ]
+    ]
+  },
+  {
+    "page": 30,
+    "table": 2,
+    "rows": [
+      [
+        "Constraint"
+      ],
+      [
+        "Not Null\nNot Null\nNot Null\nNot Null\nNot Null\nNot Null\nNull\nNull"
+      ]
+    ]
+  },
+  {
+    "page": 35,
+    "table": 1,
+    "rows": [
+      [
+        "Constraint"
+      ],
+      [
+        "Not Null\nNot Null\nNot Null\nNot Null\nNot Null\nNot Null\nNull\nNull\nNot Null\nNot Null\nNot Null\nNot Null\nNot Null\nNot Null\nNull"
+      ]
+    ]
+  },
+  {
+    "page": 36,
+    "table": 1,
+    "rows": [
+      [
+        "Constraint"
+      ],
+      [
+        "Not Null\nNot Null\nNot Null\nNot Null\nNot Null\nNot Null\nNot Null\nNot Null\nNot Null\nNull"
+      ]
+    ]
+  },
+  {
+    "page": 37,
+    "table": 1,
+    "rows": [
+      [
+        "Constraint"
+      ],
+      [
+        "Not Null\nNot Null\nNot Null\nNot Null\nNot Null\nNot Null\nNot Null\nNot Null\nNot Null\nNot Null\nNot Null\nNull"
+      ]
+    ]
+  },
+  {
+    "page": 54,
+    "table": 1,
+    "rows": [
+      [
+        "",
+        "Item/Action",
+        "Description"
+      ],
+      [
+        "☐",
+        "Element inventory",
+        "Collect an inventory identifying all structural precast\nelements that were reclaimed from deconstruction."
+      ],
+      [
+        "☐",
+        "Floor Plan drawings",
+        "Collect all available floor plan drawings from the\narchives for metadata and taxonomies."
+      ],
+      [
+        "☐",
+        "Construction drawings",
+        "Cross-sectional designs of elements, including\ngeometrical and reinforcement detailing."
+      ],
+      [
+        "☐",
+        "Inspection data",
+        "Compile any available on-site inspection information\nthat might be used to update original specifications."
+      ],
+      [
+        "☐",
+        "Element Photos",
+        "Collect any photos taken before or during\ndeconstruction to link to the element in the database."
+      ],
+      [
+        "☐",
+        "Data Collection\ntemplates",
+        "Prepare all of the data collection spreadsheets needed\nbased on the available element types from the\ndeconstruction project."
+      ]
+    ]
+  },
+  {
+    "page": 55,
+    "table": 1,
+    "rows": [
+      [
+        "",
+        "Item/Action",
+        "Description"
+      ],
+      [
+        "☐",
+        "Donor building\nmetadata",
+        "Fill in the metadata information for the donor building.\nEach project should be a single record in the\nspreadsheet."
+      ],
+      [
+        "☐",
+        "Element metadata",
+        "Fill in the metadata information for all elements by\nelement type. Every element within the deconstruction\ninventory should have one record in the spreadsheet."
+      ],
+      [
+        "☐",
+        "Element geometry",
+        "Map the geometry for all unique elements using the\ninformation in Section 3.3. Start with the global geometry\ncoordinates, then the void coordinates (for walls and\nslabs), followed by connection details and corbel details\n(for walls, beams, and columns)."
+      ],
+      [
+        "☐",
+        "Additional panels",
+        "For walls, if additional non-load-bearing layers are kept\nintact, map the geometry using the same conventions\nas above in a separate table (sheet), linking the\ninformation with the element’s product ID."
+      ],
+      [
+        "☐",
+        "Longitudinal\nreinforcement design",
+        "Map the longitudinal reinforcement design using the\nsystems developed in Section 3.3.2. Only record each\nunique design once, linking the Product ID with the\nReinforcement ID.\nFill in the anchorage details for each layer or zone based\non the available drawings and information.\nNote that all layer coordinates are taken centre-to-\ncentre."
+      ],
+      [
+        "☐",
+        "Transverse\nreinforcement design",
+        "Map the transverse reinforcement design using the\nsame reference systems (zones) as the longitudinal\ndesign and the systems developed in Section 3.4."
+      ]
+    ]
+  },
+  {
+    "page": 56,
+    "table": 1,
+    "rows": [
+      [
+        "",
+        "Item/Action",
+        "Description"
+      ],
+      [
+        "☐",
+        "Check data types",
+        "Check that the data types used for each attribute\nmatch those specified in Figure 1 and Table 1 to Table\n13. Use the definitions in Section 3 if anything is\nunclear."
+      ],
+      [
+        "☐",
+        "Check null/not null\nconstraints",
+        "Check that no mandatory data has been missed\nthroughout the spreadsheets. Fields left incorrectly\nempty will stop the data from being stored within the\nRDBMS. Refer to the relevant tables (Table 1 to Table\n13) to view the necessary constraints."
+      ],
+      [
+        "☐",
+        "Check for required\nuniqueness",
+        "Several IDs must be unique to satisfy the key\nconstraints in the database management system.\nCheck the requirements stipulated throughout\nChapter 3 and make sure all taxonomies meet the\nnecessary guidelines."
+      ],
+      [
+        "☐",
+        "Check running numbers",
+        "Often in Excel, when clicking and dragging repeated\nvalues through multiple cells, numbers can\nincrementally increase, leading to errors in the data.\nCheck that no running numbers have been let loose\nthroughout the spreadsheets."
+      ],
+      [
+        "☐",
+        "Linked resources",
+        "Ensure that all necessary drawings and/or photos are\nlinked alongside the data in the RDBMS and are\nsupplied with appropriate and clear naming."
+      ]
+    ]
+  }
+]

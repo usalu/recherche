@@ -188,8 +188,13 @@ class FullImageCollectionTests(unittest.TestCase):
         self.assertTrue(buildwise["dark_asset_path"].endswith("-dark.png"))
         self.assertIn("_neg.svg", buildwise["dark_source_url"])
         deep = {row["key"]: row for row in load("current_deep_review/manifest.json")["nodes"]}
-        for key in ("BE:I04", "BE:G01", "CH:M13",
-                    "FR:M42", "FR:M53"):
+        # BE:G01 and FR:M42 used to sit in this list too -- wrongly: both
+        # had a real own-header-logo candidate that only failed the
+        # short-edge floor (see STRUCTURAL_IDENTITY_KINDS' long-edge
+        # exception), individually reviewed and confirmed as logo in
+        # full_asset_review.json, so they are no longer in this "still
+        # none" deep-review pool at all.
+        for key in ("BE:I04", "CH:M13", "FR:M53"):
             self.assertEqual(deep[key]["suggested_result"], "none", key)
 
     def test_all_transport_keys_are_unique_and_complete(self):
@@ -223,7 +228,14 @@ class FullImageCollectionTests(unittest.TestCase):
                 self.assertRegex(candidate["source_sha256"], r"^[0-9a-f]{64}$")
                 self.assertRegex(candidate["retrieved_at"], r"^\d{4}-\d{2}-\d{2}$")
                 self.assertEqual(candidate["review_status"], "pending")
-                self.assertTrue(candidate["format"] == "svg" or min(candidate["width"], candidate["height"]) >= 128)
+                # A structural/declared-identity kind (never og_image/media_logo/
+                # editorial) may pass on the LONG edge alone -- see
+                # STRUCTURAL_IDENTITY_KINDS and the wide-wordmark exception in
+                # harvest_one. Every other kind keeps the short-edge floor.
+                short_edge_ok = min(candidate["width"], candidate["height"]) >= 128
+                long_edge_ok = (candidate.get("kind") in collection.STRUCTURAL_IDENTITY_KINDS
+                                and max(candidate["width"], candidate["height"]) >= 128)
+                self.assertTrue(candidate["format"] == "svg" or short_edge_ok or long_edge_ok)
                 checked += 1
         self.assertGreater(checked, 0)
 
@@ -298,6 +310,14 @@ class FullImageCollectionTests(unittest.TestCase):
         self.assertIn(opacity, range(1, 101))
         self.assertTrue(review["provisional"])
         for decision in review["nodes"]:
+            # A row individually reviewed AFTER the bulk pass (source
+            # sharpness upgrades, identity or crop corrections -- reviewer
+            # is no longer the bulk-acceptance marker) has deliberately
+            # moved past this snapshot: its own candidate_id/provisional no
+            # longer has to match the frozen suggestion. Every row still
+            # from the original bulk pass keeps the strict check.
+            if decision.get("reviewer") != "user (bulk suggestion acceptance)":
+                continue
             suggestion = suggestions[decision["key"]]
             self.assertEqual(decision["result"], suggestion["suggested_result"])
             self.assertEqual(decision["candidate_id"], suggestion["suggested_candidate_id"])
@@ -334,13 +354,16 @@ class FullImageCollectionTests(unittest.TestCase):
              "url": "https://www.salvoweb.com/assets/tr-logo.svg"}))
 
     def test_print_unidentifiable_visual_audit_files_are_withheld(self):
+        # FI:U04's own "durat_logo_1200_x_3390_px_3.png" used to sit in this
+        # list -- wrongly: it is Durat's own full-resolution logo, not
+        # unidentifiable editorial content, and MANUAL_CANDIDATE_REJECTIONS
+        # was corrected to stop blocking it (see full_image_collection.py's
+        # own comment there).
         rejected = (
             ("FR:F01", "CSTB",
              "https://www.cstb.fr/getmedia/x/Logo_BATIPEDIA_540x390.jpg"),
             ("FR:M19", "Gauthey Cheminées",
              "https://cheminees-gauthey.fr/wp-content/uploads/2020/06/logo-ECC.jpg"),
-            ("FI:U04", "Durat",
-             "https://durat.fi/cdn/shop/files/Durat_logo_1200_x_3390_px_3.png"),
         )
         for key, name, url in rejected:
             self.assertTrue(collection.candidate_rejection(

@@ -1,0 +1,2221 @@
+
+===== PAGE 1 =====
+Ref. Ares(2025)8175165 - 29/09/2025
+Hernández Vargas et al.
+Guidelines for a database of
+reclaimed precast concrete
+elements
+This project has received funding from the European Union’s Horizon 2020 research and
+innovation programme under grant agreement No 958200.
+
+===== PAGE 2 =====
+Publisher/project Reusing precast concrete for a circular economy
+Project acronym ReCreate
+Deliverable D1.4 Database with digital models of precast concrete
+elements
+Lead beneficiary KTH
+Author(s) Hernández Vargas, J. (KTH), Matthews, B. (TU/e), Stenberg, E.,
+Dervishaj, A. (KTH), Vullings, M.W.F. (TNO), Mudge, F.,
+Lambrechts, T., Scalbi, A., & Wijte, S.N.M. (TU/e)
+Dissemination level Public
+Cite this document Hernández Vargas, J., Matthews, B., Stenberg, E., Dervishaj, A.,
+Vullings, M.W.F, Mudge, F., Lambrechts, T., Scalbi, A. & Wijte,
+S.N.M. (2025). Guidelines for a database of reclaimed precast
+concrete elements. The ReCreate project.
+Disclaimer The content presented herein reflects the authors’ views. The
+European Commission is not responsible for any use that may
+be made of the information this publication contains.
+
+===== PAGE 3 =====
+Hernández Vargas et al. (2025) Guidelines for a
+database of reclaimed precast concrete elements
+Abstract
+The ReCreate project explores the possibilities of deconstructing and
+reusing precast concrete elements from end-of-life buildings that were
+not originally designed for disassembly. This report outlines a
+database for capturing, modelling, and exchanging data about
+reclaimed precast concrete. It focuses on database structuring,
+element verification, and the generation of standardised digital
+outputs for practical reuse in architecture and engineering.
+Reusing precast concrete at scale requires that elements become available with sufficient
+documentation to architects and engineers. This report proposes a practical approach to
+achieving this by combining archival work, field documentation, and digital modelling into
+a coherent pipeline that produces an operational database structure. A prototype
+database demonstrated how each reclaimed element is documented as digital records
+linked to its donor building, including provenance, condition, material properties, and
+geometry, all expressed in a consistent format. The proposed workflow defines what is
+minimally needed to take an element from deconstruction to design, including naming
+conventions, traceable identifiers and interoperable exchange models.
+Early implementations of the database on ReCreate’s pilots suggest that heterogeneous
+stocks of elements can be organised and reintroduced into design with modest friction,
+provided that uncertainties (such as missing values or approximate measurements) are
+explicitly flagged and data exchange protocols are observed. The report outlines
+limitations, such as incomplete drawings and manual metadata curation, and proposes
+pragmatic extensions to the current methodology, including batch exports, API access, and
+closer ties to digital twins and material passports. The approach appears transferable to
+other contexts and provides a foundation for procurement and stock estimation based on
+real, reusable components. The database is complemented by an IFC workflow allowing
+elements to be exported into common project environments and BIM platforms.
+Acknowledgements
+The following ReCreate team members provided consultancy and expertise during the
+development of the database system: Christoph Henschel (BTU), Paul Jonker-Hoffrén, Lauri
+Alkki, Niko Kotkavuo, Jukka Lahdensivu, Aapo Räsänen (TAU), and Pieter Pauwels (TU/e).
+Special thanks to Kjartan Gudmundsson (KTH) and Satu Huuhka (TAU) for providing
+valuable feedback during the revision of the final version.
+
+===== PAGE 4 =====
+Hernández Vargas et al. (2025) Guidelines for a
+database of reclaimed precast concrete elements
+Table of contents
+1. Introduction.................................................................................................................................................................................... 1
+2. Approach and database architecture .....................................................................................................................3
+2.1. Key concepts ................................................................................................................................................................ 3
+2.2. Standards and conventions ............................................................................................................................. 4
+2.3. Data model ................................................................................................................................................................... 4
+2.4. Proposed framework ............................................................................................................................................... 7
+3. Data collection ........................................................................................................................................................................ 10
+3.1. Donor building data ................................................................................................................................................ 11
+3.2. Element metadata ................................................................................................................................................. 13
+3.3. Element geometry .................................................................................................................................................. 15
+3.3.1. Walls ................................................................................................................................................................................. 17
+3.3.2. Slabs ................................................................................................................................................................................ 23
+3.3.3. Columns ........................................................................................................................................................................ 26
+3.3.4. Beams .............................................................................................................................................................................2 6
+3.4. Reinforcement .......................................................................................................................................................... 27
+3.5. Material properties ................................................................................................................................................ 34
+4. Data storage ............................................................................................................................................................................3 5
+4.1. Donor element database ................................................................................................................................. 35
+4.2. Automated capacity estimation .................................................................................................................3 6
+5. BIM modelling .......................................................................................................................................................................... 39
+5.1. ReCreate Studio ...................................................................................................................................................... 40
+5.2. IFC modelling ............................................................................................................................................................ 40
+6. Discussion and concluding remarks ..................................................................................................................... 44
+References ..................................................................................................................................................................................... 45
+Annex A ............................................................................................................................................................................................. 47
+Additional wall examples ............................................................................................................................................... 47
+Annex B............................................................................................................................................................................................. 49
+Data collection checklists ............................................................................................................................................. 49
+
+===== PAGE 5 =====
+Hernández Vargas et al. (2025) Guidelines for a
+database of reclaimed precast concrete elements
+List of abbreviations
+AEC Architecture, Engineering, and Construction
+API Application Programming Interface
+BIM Building Information Modelling
+CC Consequence Class
+CE Circular Economy
+CDE Common Data Environment
+CRS Coordinate Reference System
+CSG Constructive Solid Geometry
+DDL Data Definition Language
+DT Digital Twin
+EER Enhanced Entity–Relationship
+EPSG European Petroleum Survey Group
+ETL Extract–Transform–Load
+GIS Geographic Information System
+HCS Hollow-Core Slabs
+HRV Heat Recovery Ventilation
+ID Identifier
+IFC Industry Foundation Classes
+ISO International Organization for Standardization
+OGC Open Geospatial Consortium
+PK Primary Key
+PoC Proof of Concept
+QA Quality Assurance
+RDBMS Relational Database Management System
+SQL Structured Query Language
+SRID Spatial Reference System Identifier
+UML Unified Modelling Language
+WKT Well-Known Text
+WKB Well-Known Binary
+
+===== PAGE 6 =====
+Hernández Vargas et al. (2025) Guidelines for a
+database of reclaimed precast concrete elements
+1. Introduction
+This report describes the conceptualisation and implementation of a
+reclaimed element database that records each element as an instance
+with persistent identifiers, geometry, reinforcement, materials,
+condition, and provenance. It formalises how these data are captured,
+validated, and made available in conventional workflows so that
+designers can select and reuse elements.
+The construction sector accounts for a significant share of greenhouse gas emissions while
+also contributing to other types of environmental burdens, including the depletion of
+natural resources, high levels of energy consumption, and substantial waste
+generation (Bertin et al., 2022). Among strategies that reduce all these aspects, the reuse
+of building components from existing stocks offers one of the few viable ways to decouple
+construction from extraction. Yet, for reuse to scale beyond isolated case studies, it requires
+infrastructure that makes components searchable, their properties verifiable, and their
+exchangeable across projects.
+The aim, then, should be to prioritise the reuse and recycling of materials already
+embedded within the existing building stock. This approach is framed within the concept of
+Urban Mining, a strategy situated in the broader discourse of the circular economy (CE).
+Urban Mining advocates the systematic recovery and reuse of anthropogenic materials
+sourced from urban environments, positioning the built environment itself as a reservoir of
+valuable resources (Honic et al., 2021). Precast concrete, manufactured at scale since the
+mid-twentieth century, constitutes a considerable inventory of standardised slabs, walls,
+beams and columns that are now entering phases of renovation or demolition.
+Although precast concrete elements were not originally intended for circularity, their
+modularity offers an underexplored stock of durable, standardised components. While their
+reuse has long been technically feasible, inter alia, a lack of structured documentation and
+classification has hindered its widespread implementation. This report addresses that gap
+by presenting a comprehensive digital infrastructure for reclaimed precast elements. The
+database system serves as a base for storing precast element information, making it
+available for reuse in future projects. The current report documents the development of a
+relational database that supports classification, querying, and modelling of reused
+components; the spatial representation of geometric and reinforcement data;
+standardisation of element IDs; and the integration of this database into digital design
+environments.
+Integrating reclaimed elements into current practices within the AEC industry requires that
+the database contents be accessible in the current workflows being used. This is done in
+two parallel and complementary approaches. ReCreate Studio is a prototype plug-in for
+Autodesk Revit that enables the management and import of database contents into the
+software's graphical user interface, minimising disruption to current practices. The second
+1
+
+===== PAGE 7 =====
+Hernández Vargas et al. (2025) Guidelines for a
+database of reclaimed precast concrete elements
+approach is an experimental Python library, ReCreate_IFC_workflow, that generates native
+Industrial Foundation Classes (IFC) files from validated database entries. Built on the open-
+source library ifcOpenShell (IfcOpenShell, 2025), this pipeline preserves geometry and
+metadata without data loss in vendor-agnostic workflows supporting long-term
+interoperability.
+This report is built on previous tasks within the ReCreate project. A digital map (Stenberg et
+al., 2025) comprised archival research, field documentation, and modelling routines on the
+geographic and typological distribution of precast concrete systems in eleven European
+countries. It established a repository of country dossiers, which provided a basis for
+historical documentation on precast concrete systems. An analysis of the typologies
+(Hernández Vargas & Stenberg, 2024) proposed a framework to describe precast concrete
+elements across three scales: buildings, components, and connectors. A taxonomic system
+(Hernández Vargas et al., 2025) introduced a faceted classification system and a naming
+convention that support the digital encoding of taxonomic knowledge about precast
+concrete elements and systems. The current report integrates these efforts into the
+conceptualisation and implementation of a database of donor precast concrete elements.
+The elements in this initial version are taken from four donor projects in the four leading
+countries in the project, and can be accessed here:
+https://zenodo.org/records/16809738.
+The complete source code, developed in Python and SQL for the database presented in this
+research, has been released as open-source and distributed under the GNU General Public
+Licence v3.0, and is available at:
+https://github.com/bma114/ReCreate-Element-Database.
+Similarly, the Python library for the creation and manipulation of IFC files based on
+ifcOpenShell is released and publicly accessible through the following repository:
+https://github.com/josehernandezvargas/ReCreate_IFC_workflow.
+ReCreate Studio is thoroughly described in Fred Mudge’s EngD thesis (Mudge, 2024). Finally,
+a scientific version of this work is being prepared as a journal article, which will provide a
+more in-depth coverage of the database's architecture and implementation.
+The report is organised into four main sections. Chapter 2 presents the methodology,
+including the conceptualisation of the database, an overview of the workflow, and relevant
+standards. Chapter 3 describes the guidelines for data collection. Chapter 4 describes the
+implementation of data storage in MySQL. Chapter 5 explains BIM workflows to use the
+database of reclaimed elements in new projects. Finally, Chapter 6 summarises the
+discussion and gives concluding remarks.
+2
+
+===== PAGE 8 =====
+Hernández Vargas et al. (2025) Guidelines for a
+database of reclaimed precast concrete elements
+2. Approach and database
+architecture
+Architectural and structural design for reuse projects presents a distinct set of challenges
+when compared to conventional design development. Unlike new construction, where
+material properties and dimensions can be specified and adjusted, reuse scenarios involve
+working with pre-existing elements whose properties may be uncertain or partially
+undocumented (see Räsänen et al., 2025). Further challenges include variability between
+available elements, dissimilar material properties, incomplete technical specifications, or
+undocumented interventions (ibid.). Designers working under these conditions require
+reliable identification mechanisms, access to source documentation, and a clear record of
+any deviations. Furthermore, all this information must be encoded in formats that allow
+interoperability across digital design tools and project phases.
+The database plays a pivotal role in linking individual components to broader digital
+workflows, including digital twins and material passports. Since precast concrete elements
+are industrially manufactured and generally produced within system-specific constraints,
+their reuse depends on preserving that systemic logic. The classification used here reflects
+that understanding. The current chapter describes the conceptualisation and structure of
+the database. The section also documents the standards and conventions adopted for
+collecting, modelling, and managing data.
+2.1. Key concepts
+This section outlines the key concepts that support the approach: an element database
+serving as the authoritative source of record; digital twins that maintain an up-to-date
+representation of each physical element over time; and material passports that provide a
+structured dossier of composition, provenance, and reuse potential. The three are
+complementary. The database supplies strongly typed data, i.e., every record is restricted
+to a specific data type. Since the information is stored in a structured way, it can be
+searched and combined systematically, making the facts held in the database reliably
+queryable. The digital twin organises those facts as a time-aware asset model, while the
+passports enable traceability for downstream actors (designers, contractors, regulators)
+who need to verify suitability for reuse.
+Precast concrete elements are standardised products that, in most cases, are part of a
+system. Therefore, at the core of the database is the distinction between an element class
+and building element instances. An element class refers to a ‘blank element’, i.e. the set of
+specifications of an element type, without any reference to any physical counterpart. In
+contrast, a ‘donor building element’ represents a particular instance of that class in a
+specific context, referring to a unique, physical entity. Each donor building element includes
+a persistent identifier, survey-based measurements, and metadata about the elements’
+3
+
+===== PAGE 9 =====
+Hernández Vargas et al. (2025) Guidelines for a
+database of reclaimed precast concrete elements
+physical condition and history. These elements are the actual entities that can be reused,
+modelled, and assessed, while their relationship to the generic element definition (blank
+element) enables semantic structuring and grouping. Thus, the database functions as a
+centralised system for linking these abstract class definitions with their materialised
+counterparts. Attributes such as survey data, test results, production year, or quality control
+information are attached at the instance level, creating a traceable and well-structured
+record of each reused element.
+2.2. Standards and conventions
+The development of the database follows established standards to ensure consistency and
+interoperability. Construction classification draws on ISO 12006-2 for construction
+classification (ISO, 2020). BIM standards are based on ISO 19650 for building information
+management (ISO, 2019a), together with EN ISO 16739-1:2024 (ISO, 2024) which defines the
+IFC 4.3 schema, and ISO 10303-21:2016 specifies the STEP file format for model storage.
+Further guidelines for BIM-aided pre-deconstruction audits can be found in (Vullings et al.,
+2022) and (Vullings et al., 2024). Material properties and quality management also build
+upon previous reports within the ReCreate project (Räsänen et al., 2024, 2025). Similarly,
+names and IDs adhere to the faceted taxonomy previously developed within ReCreate
+(Hernández Vargas et al., 2025), including standardised codes for country, system, element
+type, manufacturer, and year.
+Geometric properties follow the conventions specified in the tables in Section 3, with
+Cartesian coordinates in millimetres and reinforcement defined in terms of zones and
+planar profiles. All geometric definitions and internal voids are encoded as Well-Known Text
+(WKT) geometries in local coordinates (ISO, 2016b) to keep the core store compact and to
+simplify export rules. Structural checks are based on the Eurocode EN 1992 (CEN, 2008)
+specifying design rules for reinforced and prestressed concrete. Concrete performance is
+based on EN 206:2013+A2:2021 (SIS, 2024), which sets out durability requirements and
+exposure classes for concrete.
+2.3. Data model
+The data model follows an object-oriented approach to the problem. The database is
+structured to represent physical components (walls, slabs, beams, and columns) with
+properties and well-constrained relations, ensuring that meaning is preserved as data
+move from surveys and drawings into modelling and analysis. Implementation is relational.
+Relationships between tables are expressed as links between keys. Every table is assigned
+a primary key (PK), typically an auto-incrementing integer or structured identifier, while
+foreign keys (FKs) express relationships between records and maintain referential integrity.
+Candidate keys are used where natural uniqueness exists, such as internal designations
+(unique names or codes to identify components in that specific project) or donor-based
+IDs (labels derived from the donor building that ensure traceability), without replacing the
+system-assigned PKs. Human-readable identifiers, developed from the faceted
+4
+
+===== PAGE 10 =====
+Hernández Vargas et al. (2025) Guidelines for a
+database of reclaimed precast concrete elements
+taxonomy (Hernández Vargas et al., 2025), are stored alongside technical keys to support
+both human legibility and automated traceability (see Section 3.2).
+Universal Modelling Language (UML) is a language-agnostic, object-oriented visual
+modelling language for conceptualising the structure and relationships of complex
+systems. In the context of database design, UML diagrams are used to describe the logical
+schema of the database, with each class corresponding to a table, and attributes
+representing typed fields. These diagrams serve as a conceptual scaffold, helping teams
+from different backgrounds converge around a shared understanding of the data model
+before any implementation takes place. The UML model is then translated into an Enhanced
+Entity–Relationship (EER) schema, which introduces database-specific features such as
+cardinality constraints, inheritance, and composition. These constructs help clarify how
+elements relate to one another, for example, how SLAB, WALL, BEAM, and COLUMN inherit
+from a generic ELEMENT table, or how voids and reinforcement zones are compositionally
+tied to specific instances.
+The distinction between identifying and non-identifying relationships is encoded
+structurally to distinguish dependencies from looser associations. For example, voids
+illustrate an identifying relationship, as they cannot exist without a parent element, and their
+identity is not separable from that element’s key. Conversely, the relationship between the
+element and the donor building is non-identifying, as it retains its own identifier
+independently. EER diagrams also allow for the explicit definition of cardinality constraints,
+which determine the maximum number of instances of one entity that may relate to
+another. For example, a one-to-one relationship can be observed, where each element
+instance is linked to a unique single identifier. A one-to-many relationship can be illustrated
+by the way a donor building may contain many elements. A many-to-many relationship
+can be exemplified by the association between elements and documents, since a single
+element may be linked to multiple drawings or reports, and each document can be
+associated with several elements.
+Each class represent a table in the database, and the attributes in each class represent, in
+turn, table columns. Figure 1 shows the EER diagram for data collection, where each attribute
+is restricted to a specific data type (cf. Chapter 3), while the types of relationships are
+expressed with different symbols: inheritance (white arrow), composition (black arrow), and
+aggregation (black diamond). Inheritance expresses the transfer of attributes in a parent-
+child relationship, where the child item cannot exist without the parent. Composition
+declares relationships between a whole and its parts. Finally, Aggregation represents a
+looser association where entities can exist independently but still share a contextual link.
+Moreover, this data collection structure is primarily developed around parameterising an
+element’s geometry and reinforcement, including taxonomic information, material
+properties, metadata, and building data. It should be noted that other fields, such as
+findings of quality management or lifecycle analysis, which are included in the relational
+architecture, have not yet been integrated into the data collection process. The overall
+structure can be separated into groups of tables for each element type, i.e., walls, beams,
+slabs, and columns, which are represented by the dashed boxes.
+5
+
+===== PAGE 11 =====
+Hernández Vargas et al. (2025) Guidelines for a
+database of reclaimed precast concrete elements
+Element ID
+Donor building (main)
+data
+Building Component
+Abstract Class
++Element_ID : String
++ + + + + N W W N St u u i i o n n m m r g g e _ _ _ _ y S S W F I _ D t t F l o i r o n u l : o r o g e c l o r i s y _ t s r u s t A : _ < r i A r : n a S e l r l i t t a e s r F i t a n : < r g l a : i i n s > m li t t s > < e t fl < o fl a o t a > t> 1ComprisesO 1 f + + + + + + B C N C B C u u i a o o t D u i y o m i l l d d n r o : e d i i t n n S n s r : y g g t o _ r S _ _ r : L i n T I t a S D r B g y i t t n L p u r : g i e o i n S l n d g : t g r i S i n n : t g r g fl i n M o g a e t taData ReclaimedFrom ReclaimedFrom +getElementID()
++ + + N N N u u u m m m D _ _ _ e I F C n c a o t o _ c lu n W a m s d a t e n r l s l s u s c : : : t i i n i n i n o t t t n Data Co 1 mprisesO
+1
+f
++
++ +
++
++
++
++
+D
+T E
+D
+N
+C
+C o x
+e e
+o
+o
+o t p
+c c
+t
+n
+n a e o
+o s
+s
+o
+l s _ s
+n n t
+e
+r
+F u
+s s
+q :
+u
+l r
+t
+u
+t
+T o
+c r
+e
+r
+e e
+u u t
+o _
+i
+x
+o
+n
+c c
+r C _ t
+t n t
+c
+i i
+l A e
+o o _
+a
+n n
+r
+Y
+_ s e
+_ _
+C
+e
+s a
+C Y a
+l : a
+e r
+:
+o
+S s
+a
+fl
+: m
+s t
+r
+o
+Y
+r
+p
+i :
+:
+a
+e
+n
+a
+S
+Y
+t
+a
+g
+n e
+t
+r
+r
+y a
+i n
+r :
+g
+String ReclaimedFrom
+HasSlabElmt
++ + N N u u m m _ _ H Be C a S m : s in : t int HasWallElmt
++Num_Solid_Slabs : int HasBeamElmt HasColumnElmt
+ReclaimedFrom
+Walls + + + + + + + + + + + + + + + + O S B W C H N W R F H S W G P In t u l t r o a o e a r t o r a o i a a o i e i n a s t i i s e o d l l l e n r d t l l g d r _ _ t a u _ n _ _ v r i s f u i _ D _ T n s t g n P T I e : a c D N e g : I e g y a n o S : t D t s T _ _ _ p u _ m i t S s : t o i t e I L r L e m I o W s : D S t n i D a : x a r a n n S b : t i : t S g a y t : g r n _ : t : L S b e i e l e r t S g C n S l r S i o o r t r n i t r g : E t l n t n o r : a i r : g r b i n g i g l i l i n s S n n e n o g s g g : m t g o t r fl : i l e n o S n g a tr t t ing Beams HasCorbel + + + + + + + + + + + + + + + H S B B G I R F S B N W C H P n e t e u t l r a e o o a t r o o i a o e i n s a i a i t a s d o l r n e d t r g d _ _ a m t m u _ v r f i s u i _ T _ D n s g n P e : _ _ c e N g : I e g a n o S : t D T I s D S _ _ _ u _ m t S s y t i B t I L r L t m I o s : p D t r i D a : : a r e a n n i S e b i : n S S g y a t g n _ : t : L b g e e : e r t t m g C S r r S i o o r r S n i i : t l n n t n o : a r : g t E r b r g g i g i l i s S n n i n o l n s e g : t g o t r g m fl : i l n o S e g a t n r t i t ng HasCorbel 0 0 . . . . * * + + +
++
++ + C F F
+S
+P E
+C
+C C r x o o t u
+S
+S S r d n u _ _
+_
+u d C t X R
+Y
+c e : o t Z
+Z
+a d _ in r d _
+_
+I _ b D t r
+r
+P : a e
+a
+l l : d l
+d
+i a s S G n : t
+:
+< t e e l
+l
+r i
+i
+fl i s
+s
+o n : t o
+t
+m < g
+<
+S a V
+V
+t t e r > e
+e
+i t n r c
+c
+y g t
+t
+o
+o
+r
+r
+3
+3
+D
+D
+>
+>
+0..* HasCorbel + + + + + + + + + + + + + + + I R F S C N C H P W H S B C G n t l r t u e o o o a a o t o r a i o o e i n i l t a s s l i o d l n u e d r u t r g d _ _ t a u _ v r f m i s u m i _ _ D T n s g n P e : c N e g n n : I e g a n o S : t D C s _ S _ _ _ _ u _ m t S s t i t I T I L r o L t m I o s : D D t r i D a : a y r a n l n i S b i u : n S g p y t g n _ : : t : L b g e e m e e r t g C S S r S i o o r r n i : : t t n l n t n o : a r r : g r b S g i i g i l i E s S n n n n o t s r g g : t l g o t r i e fl n : i l m n o g S g a e tr t n in t g Columns + + + + + + + + + + + + + + + S H N P W C S S G H B S I R F n l l r t u t l a o o a e t r o a a i o a o e i n s t a s i i d o b b l d e r n t g r d _ _ t a u _ v r _ _ u i s f i _ D T _ n s g n P e : I T c D e N g : I e g a n o S : y t D s S _ _ _ u _ m t p S s t : i t I L r S L t m I o s : e D t r i D S a : a r a n n l i S b i : a n S : t g y t g n _ : r t : L b g e S e b e r t i g C S r n S i o o r r t n i : r g t E l n t n o : a r : g i r b g n i l g i l i s S n e n n o g s g m : t g o t r S : i l e n S t n r g t i t r n i g ng Slabs
++SCS_Rad : list<float>
+0..* + + + C C N o o o u o te n r s d t s : : _ S in X W t t r Z i a n Y l g l : V li o st id <V s ector3D> 0..* WallGeom ConcMatProps BeamGeom + + + P P N C C ot S S e _ _ s C X R : o Y a S n d _ t c r r i : r a n e l d i g s t e t : < l M i fl s o t a < a t V e t> e ri c a t l or3D> ColumnGeo C m oncMatProps ConcMatProps HCSGeom SlabGeom
+0 0 .. . * .* + + + + + + + + + + + + + P V P F P S P P E I I I N n n n o C C C r a a a x o s s s o i t n n n t u u u S S S d e d e e e e l l l r _ _ _ u s _ _ _ : l l l n R _ _ _ R R F S P c b a : F S P t A a C C C o a a l _ S _ W C C C d o d d d T S S S t F r _ _ _ S S S l y d a _ i _ _ i B n B B n p _ l _ _ i X Y X l t g i e e e e X Y X i s Z Z Y C o v v v h Z Z Y : n o : : : _ : _ : : S _ : a n l l l l r i l l r i i r t i S i i s l s a s r a n s a s s t i t t t P t d d t t d n < e < r < < < < i g a c V V : V n : fl : fl fl n t e l g e l e o l o o i i i i s e s o c s c a c a a t t t l t n t t t t t < < l o < o o > > > i s V n r V r V r 3 3 3 e g e e D D D c c c > t > t > t o o o r r r 3 3 3 D D D > > > 0 H .. a * H s a C P s o a V n n o n e id e ls s c K t ept 1 1 1 + + + + + + + + + + + + + + + S C P R M C F F S S P P S A N a C C C C g C C r t o e o o i r o r n n i u t g e S S S S S S r d e n o _ c d n n _ _ _ _ _ _ u s f r _ S w r t g X R e Y R X R e c : I : i t i t d D Z z t c h Z Y a a a S _ i e n e _ W h _ d d d I _ t : : : : D D t _ C r _ _ _ : T l a i l S l i P i i B n e B B l i s y s s a l : n t g l a s t e t r e e t p S s < t < i < G i n v e n g v v s t V V V e r g n e : : : : e i : e e l n o s l l l S c : S i c c i i 1 g s s s m t t b : t t t t o t t o o r r < o < < b i i e r r r n n o 3 fl o 3 fl fl 3 t g g r o o D o o D l D y a a a l > > > t t t > > > 1 + + + + + + L C C D D N o o o e i o a c n u p te m a n n th s B t e i e t o e t : : : c e n a t S i i n n i r _ m o t t t : X r n i i Z n _ n C g Y T t o y n : p n V e e e : c c S t t o i t o r r i 3 n n D s g HasConnect + + + + + + + + + + + + + + R C P M C F F S S P P S A N C C C C g C C r t e o o o i r o r i n u t g e S S S S S S r n d e o _ c n n _ _ _ _ _ _ f u s r _ S r t g X R e Y R X R e c I : : i t t d D Z z t h Z Y a a a B S _ i e n e _ _ d d d I _ t : e : : : D D t C r _ _ _ : T l a i S l l i i i B n e B B l i s y s s m a : n t g s t e r t e e t p S s < t < i < i v e n g v v s G t V V V r g n : : : : e i : e e e n l 1 l l S c : S i c c o i i g s s s t t b t t t m t o t t o o r r < o < < i i r r r n n e o 3 fl 3 fl fl 3 g g t o D o o D l D r a a a y > > > t t t > > > 1 ConcMatProps + + + + + + + + + + + + + + S O C f M f E U N A B P f f _ _ _ _ e l t n u o l o r e c c c c a r t i u t n e c i b a g k t m t s m e k m h n n t l i s t i _ s n : P o i c a : t g u c : Z A fl r a a : r t r : fl _ t y r fl a e o o h l t n fl o e _ S o M o i _ g a : _ o o n m g p S a t a S t o e n S C r a e l e t e t t e i _ d t _ t a t n r l r A r a n T : Y t u a g n i i t n s y n l l i e d e _ i u n s g p s c a a s M s t e h : : r r < L e d : fl S o : fl : t i fl o t i : o b r h S n r o a a a S o i r t t a n g t r a t d t i > t g r r e n i : y n g S g tring Con cMatProps 1 + + + + + + + + + + + + + + C P R C C F F S S P P S A N C C C C g C C r t o e r o o r o o n i u t g e S S S S S S d n e s _ c n n _ _ _ _ _ _ u f s s _ S r t g X R _ Y R X R e c : I : C i t t D S Z z t h Z Y a a a S _ i e o n e _ e d d d I _ t : : : : D l t C r _ c _ _ : u T l i l S l i t i i B n B B l i s i y s s m a : n t o g t e t r e e t p S s < t < n < i n v e n v v s t V V V r : g G : : : : e i : e e S n l l l S c S i 1 c e c i i g s t s s t t t r t o t t o t t o o r r i < < < n i m i r r r n n 3 fl 3 fl fl 3 g g g e o D o o D D t a a a > > > r t t t y > > > 1HasC 0 o . n .* nect+ + + + + + L C D D C N o o e i o o a c u p n te m a C n t n h s t e o i t e o t : : : c l e n u t S i i n n i r _ m o t t t : X r n i n i Z n _ n g Y T C t y o : p n V e n e : e c S t c o t t r r i i 3 o n D n g s + + + + + + + + + + + + + E N P R C H L W V V C S A e o o x g r t o e o e o r i o n i i t d t i u i n g e d d _ e d n g g t _ n c n _ _ h W s u f h t _ S r t g C D h t e c : : I e : i t t D : o i z t h : i a S _ b i e n n e i u H _ i n I m _ _ n t : t D n t C r C t : T C t i S e t n l i S h a : n o t t : g r e i S s v t c i in r G n s e t k _ r g t e r n i : X n o : e S Y 1 g m s V t s r : e i e n V c : t g t e r fl o y c o r t 2 a o D t r2D + + + + + + + + + + + + T P R S S L L S S P M M T o h T T r h h r e e e o e n W i i W S e e c s s d s n g a a k h h _ _ u f e S _ i _ r r H n t _ _ P P n _ _ u c t P I e D S o r C t t D o t t d o _ u o o s p i : s s S i a s I s n _ _ c : i a D b i t i m t a W S t S i t : c o i C o o u i l o l i : i e t o _ n n a a n n o r r n S t t i l a b g l n t e e o n l : : t _ l : r a r n _ g l : : l i C i i l T n : W s i n e s i i s n n o t o t i g c t n < < a t t p u < t i t i l i n n p n i l o n t t : i t n > t n > : > in s g in t t + + + + + + + + + + + + + R C F S P P S A C N P F S C C C g C t C C r e o o o r o i u n t g e S S S S S S n e d _ n c n _ _ _ _ _ _ f s u _ S r S t g R X Y X R R e c : I : i t o t D Z z t h Z Y a a a S _ i e l n e _ d d d i I _ t : : : : d D t C r _ _ _ : T l i l S l i i i B n B B l i S s y s s a : n t g t e t r e e t p S l s < t < i < a v e n v v s t V V V b r g : : : : e i : e e n l G l l S c S i c c i i g s s s 1 t t t t e t t o t t o o r r < < < i o i r r r n n 3 fl 3 fl fl 3 m g g o D o o D D e a a a > > > t t t t > r > > y 1 1 Ha H s a C s o V n 0 o n . i . d e * 0 s c . t .* + + + + + + + + + C L D D C N C C N o o e i o o o o o a c u p n t u o t e e m a n t n n r h s s t d e S i t e t s o t : : : : : c l e _ n a t S S i i i n n n i r X _ b o S t t t t t : X r r Z n l i i C i a Z n n Y _ n g g o b Y T t : n y V l : p i n s o V e e t i e < c d : c V t s S t i e o o t c r r n i 3 t n o s D g r3D>
+0..* + + + + + + C L D D C N o o e i o o a c u p n te m a n t n h s t e i t e o t : : : c e n t S i i n n i r _ o t t t : X r n i i Z n _ n g Y T t y : p V e e : c S to tr r i 3 n D g 0..* + + + + + + + + + + + + + + + R Z Z Z Z L C L L L N B B S N a a a a o a a t o o o e o u o e y y y y W n n n n i n m t r r n e e _ _ e e e e e e e e c a f s l _ D S r r r r _ _ _ _ _ _ r _ _ _ _ l B e p i H I P V G l I : a I H V P D D t a D a L S l _ e _ m r o _ a _ c a r o _ C t C : : s n C s : C r i e d C n S n 0 i S i o e o S n t o : t o e g . e t i g o o t o o . g t o i r o r : D n * r r r v . : r i i : n r r i n d S n d t e e n R d : S d i g n s g s t : s r g s i s t r e n _ r t fl i i : : i i n g : t : x n n o V V g V z n V g a f e e y e o e t c c c c r : t t c t o t o V o o e r r e r r 2 2 m 2 2 c D D D D t e o n r3 t D 1 L Z a o y n e e r A A n n c c h h o o r r a a g g e e + + + + + + + + + + + + + + + R Z C Z Z Z L L L L N B B S N a a a a o a a t o o o e o u o B e y y y y n n n n i n m t r r e n e e _ _ e e e e e e e e c a f s l _ D S r r r r _ _ _ _ _ _ r _ _ _ _ m B e p i H I P V G I : a I H V P D D t a D a S l _ e _ m r o _ a L _ c a r _ C t C : : s n C s 0 : C r i o e d C n S i i i o e o . i n n t o : n t o n e . g e t i o o o * o g t o i r o D g : t n r r v : r i : n r r n d . S d e t e d : S d i g n s R s t s : r s i s t r n _ r t i fl i e : : g i n : t x : n o i V V g n n V z V g a e e y f e e t c o c c c : t t r t o t o V o c o r r e r e r 2 2 2 2 c m D D D D to e r n 3 t D 1 Lay S er te A Z e n o l c M n h e a o A t r P n a r c g o h e p o s rage 11....** + + + + + + + + + + A H N B R D S N P N n e o o p i a i u o o t c n a n e h d m t a k t n e m _ s o i c e e u s _ A i r e d : L d n s P a n t : S _ g _ a e g i : g S L n t S y r e r : fl l t e s e e i p : r _ i o n n n i r i : a T n : a g n t g A i n y g l t n t i t p s h n t : t e c < S : h V : l t i r s o S e i t n c r t < r g a t i V o g n r e g e 2 c D to > r2D> 11....** ZoneA S n t L e c a e h y l o M e r r a a A g t n P e c r h o o p r s age 1 + + + + + + + + + + + + + + + R Z Z Z Z L C L L L N B B S N C a a a a a a t o o o o e o u o e o y y y y n n n n i n m t r r n e e _ _ e e e e l e e e e c u f s l _ D S r r r r _ _ _ _ _ _ r _ _ _ _ m B e p i I P H V G I : a I H V P D D t a D a S l n _ e _ m r o _ a _ c a r _ C t : C : s n C L s : C r i e d 0 C n S i i i o e o i n o n t o : t o n e . g e t i o o o . o g t o n i r o : D * t n r r v : r i : n r r g n d S d t e e d : S d i g n s . s t : s r s i s t r n _ R r t fl i i : : i n g : t x : n o e V V g V z n V g a i e e y n e e t c c f c c : t t o t o t o V o o r r r e r c r 2 2 2 2 c e D D D D t m or e 3 n D t ZoneAnchorage LayerAnchorage + + + + + + + S N R L S S N a t t t u e o r r r y a m a a i t n e e n n n f s _ r _ d d d _ W : T _ _ _ N H S y I C D i D u r C p t e o i m r a e S i s o : 0 n m r i . : : : n g P . d e * S i i t n r _ n t t e e x r t t s i r y n t : g r : i e n V s t e s c i t n o g r2D 1 + + + + + + + + + + + + + + + R Z Z Z Z C L L N B S L L B N a a a a a t o o o o a e o u o e y y y y S n n n n i n m r t r n e e _ _ e e e e e e e e l c a f l s _ S D r r r r _ _ _ _ _ _ r _ _ _ _ B b e p i I P H V G I : a H P I V D D t a D a S l _ e _ L m r o _ a _ c a r _ C t : C o : s n C s C : r i e d 0 C n S i i n i o e o i n n t : o t o n e . g e t i o o o g . o g t o i r o S : D * t n r r v : r i . : n r r n d S l d t e e d : S d a R i g n s s t : s r s i s b t r n e _ r t fl i i : R : i n g : i t x : n o n V V g e V z n V g a f e e y i e e o t n c c c c : f r t t t c o t o V o o e r r e r r 2 2 m 2 2 c D D D D t e o n r3 t D
++ + + + + + + + + + + + + R Z D B S N B B S S S S N a e e p p t p h o W e e u o e n i m t r n n a a s a a n e e _ a e c p t t n n c _ _ f s l _ D l i r _ _ _ _ _ e l n i P A B p i I G I : _ A P T a g D D l n e t S x a x o r m r i o g : a n a z n i t : s : s r n l y i e d n d e e i n S i S t 0 n t s : e s i : t e : t o t : : g . r D S r v : l . r S n : i i i S fl * . n s t n e i : S t r n o t t R : r g g s i r i < t a i n t n i V r n i e n V 1 t g g i t e g i n g . e n n . c g * c f t o o to r r r 2 c 3 D e D m > ent St S e t e e l e M lM at a P t r P o r p o s ps + + + + + + + + + + + + + S S R Z D B S N B B S S N B t h a e e p p p o e e u o e e n a i m t r n n a a s a e n e _ a e p c t t n n c _ _ l f s _ D m i r _ _ _ _ _ e n i P A B p i G I : I _ A P a g D D l n e T t S x a x o m r i o g : a n r z n i t : s : s 0 r a n l y i e d d e e i n S i S t . n n t s : e i . : t e : t o t * : : g s r S r D l : r S n : i i i S fl v n s t n i e : S t r n o . t t : r g g i r s i < t a i R n t n i V r n i n V t g i g t e e g n g e 1 i n c g n c . t . o t f * o o r r 2 r 3 c D D e > ment SteelMatProps + + + + + + + + + + + + + S O P C f f E F M D S N U s y t l u r u S o u o l u r k e e a a t i u t r c b i t a g s m e e f c : : e n l a t i i s t t s n l i i i e c i l u a _ n n t c u c i r a a t l r t G e : t _ y r y t e e t l e M _ S _ _ M i r _ _ : o m a S P C t a S S o n S r d t r e i t l L d t _ a t a t n o e e r r r n i Y u a g n fi a s i r b t n : i l e i s d l i _ u e a n r n g S a a L a s : l t : : r r : e r r S P d : y fl S i fl : n n t r fl o o r t i : g o n g r i o a a S t n i p t h a n t t g t e t g r : i r n fl ti g o e a s t SteelMatProps + + + + + + + + + + + + + C S S R Z D B S N B B S S N o t h a e e p p o p e e u o e n l a i m t r n n a a s a u e n e _ e p c t t n n c _ _ l f s _ D m i r _ _ _ _ _ e n i P A B p i G I : I _ A P a n g D D l n e t S x a x o m r i T o g : a n z n i t : s : s r n l 0 r y i e d d e e i n S i S a t . n t s : e i : . t e : t o t n : : * g r D S r l : r S n : i i i s S fl n s t n e i : S t r n v o t t : r g g s i r i < . t a i n t n i V r n i n R V t g g i t e g n g e e n c 1 g c i t . n o t . o * f r r o 2 3 D r D ce > ment SteelMatProps SteelMatProps + + + + + + + + + + + + + R Z B S B B S S S N D N S a e e p p p h o t S e o e u e n i t r n n a a a a m s l n e e _ a e c p t t n n c _ _ f s l _ D b i r _ _ _ _ _ e n i P A B p i I G : I _ A P a g D T D l n e t S x a x o r m r i o g : a n z a n i t : s : s r n l y i e d d n e e i n S i S 0 t n t s : e i s : t e : t o . t : : g r . S r D v l : r S n * : i i i S fl n . s t n i e : S t r n o t t : r g R g i r s i < t a i n t n i V r n i e n V t g i g t e g n i g e n n c g 1 c f to . t o . o r * r r 2 c 3 D e D m > ent
+Figure 1. UML class diagram of database structure for Data Collection phase. Note: the figure is a zoomable a vector graphic.
+6
+
+===== PAGE 12 =====
+Hernández Vargas et al. (2025) Guidelines for a
+database of reclaimed precast concrete elements
+This level of detail is crucial for preserving semantic clarity and for enforcing relational
+integrity rules in implementation. By combining the abstract clarity of UML with the
+specificity of EER modelling and deploying these within a robust relational database
+management system (RDBMS), researchers can maintain standardised data structures,
+enable complex relational queries, and accommodate scalability as datasets expand into
+large datasets across multiple projects.
+2.4. Proposed framework
+The database is implemented in MySQL, an open-source RDBMS, and it is specifically
+designed to meet the requirements of concrete precast elements. The information model
+follows a top-down logic in which classes define standard semantics and instances
+capture the measurable properties, provenance and condition of a specific element. The
+architecture of the database is structured in three parallel schemas: i) the Core Schema
+stores normalised records with constraints and identifiers; Ii) the Physical Properties
+Schema contains indexed and precomputed aggregates for frequent queries and exports;
+and iii) the Analysis Schema provides stable read-only views for search, reporting and
+downstream automation. Arrows indicate data flow across layers during ingestion and
+transformation, as illustrated in Figure 2.
+Analysis Schema
+BIM
+Physical Propieties Schema
+Modelling
+Data
+Core Schema
+Collection
+Database
+Storage
+Figure 2. Three-schema database architecture, including: i) Core Schema, ii) Physical
+Properties Schema, and iii) Analysis Schema, with their corresponding data flows.
+The database workflow is organised into three consecutive stages, as shown in Figure 3.
+Currently, Stage 1 captures and structures evidence from drawings, surveys and tests; Stage
+2 validates and stores the records within the relational schema with typed constraints and
+provenance; Stage 3 generates exchangeable models and embeds the data in BIM
+workflows.
+7
+
+===== PAGE 13 =====
+Hernández Vargas et al. (2025) Guidelines for a
+database of reclaimed precast concrete elements
+Figure 3. The workflow for the database is divided into three discrete stages:
+1.- Data Collection, 2.- Data Storage, and 3.- BIM Modelling.
+Stage 1 comprises data collection, which is based on Microsoft Excel spreadsheet
+templates. At this stage, data is extracted manually from existing construction drawings or
+available test documentation (for more details, readers are referred to Räsänen et al.,
+[2024], [2025]; and Vullings et al., [2022]). This manual approach was intentionally adopted
+during the pilot phase to develop a more nuanced and integrated understanding of the
+reuse process before transitioning to automation.
+Stage 2 involves transferring this parametric data into a MySQL RDBMS. Once all data for a
+given donor building has been compiled, the spreadsheets are processed using Python
+scripts that convert the 2D coordinate information (Section 3.3) into standardised 3D
+geometries. This step includes aligning the collected data with mapping conventions and
+ensuring consistency for later modelling. The resulting outputs are machine-readable and
+structured to serve as inputs for future IFC-based digital modelling, bridging the gap
+between archival documentation and contemporary design tools.
+Stage 3 focuses on generating BIM models and integrating workflows. Once records are
+validated and stored, element instances are transformed into exchangeable models. Export
+scripts map database fields to IFC 4.3 entities and property sets, generating files that
+preserve identifiers and provenance links. Geometry can be expressed as parametric
+volumetric shapes when appropriate, or as explicit coordinate-based profiles when greater
+fidelity is required. Reinforcement is represented through zoning and layering reference
+systems, which downstream tools may interpret as surrogate bar sets or as simplified
+proxies, depending on the level of detail available. The resulting models can be inspected
+and filtered through the ReCreate Studio interface (see Section 0) and can be imported by
+both commercial BIM platforms and open IFC native tools. A lightweight screening routine
+‑
+8
+
+===== PAGE 14 =====
+Hernández Vargas et al. (2025) Guidelines for a
+database of reclaimed precast concrete elements
+reads the stored geometry and reinforcement descriptors to provide indicative capacities
+for early design, with results kept clearly separate from formal verification. Feedback from
+design teams and site operations is then reintegrated into the element records, closing the
+loop between fieldwork, modelling and reuse decisions.
+This workflow is explained in more detail in the upcoming chapters. Stage 1 is described in
+Chapter 3, while the storage (Stage 2) is discussed in Chapter 4, and the BIM modelling
+(Stage 3) is explained in Chapter 5.
+9
+
+===== PAGE 15 =====
+Hernández Vargas et al. (2025) Guidelines for a
+database of reclaimed precast concrete elements
+3. Data collection
+The data collection process is designed to produce a consistent and machine-readable
+record of each reclaimed precast concrete element. Source data includes original
+construction drawings, site measurements, scanned documents, deconstruction records,
+and metadata from donor buildings. For each entry, a minimum set of required fields is
+defined based on the classification scheme and database schema.
+Figure 4. Data collection pipeline.
+Structured Excel templates are used to collect data prior to import. These templates are
+aligned with the relational schema described in Figure 4 and facilitate manual entry of
+geometric parameters, reinforcement layout, and material properties. Each element is
+assigned a unique identifier based on the naming convention introduced in (Hernández
+Vargas et al., 2025), which encodes element type, country, manufacturer, system, year, and
+original designation (see Section 3.2 and Figure 5). Where available, historical classification
+systems are preserved in a separate metadata field, allowing for cross-referencing with
+archival documentation.
+Geometry is recorded using Cartesian coordinates and local origin points, as defined in the
+data collection guidelines in Section 3. Elements are then partitioned into zones (by function
+and position), which then enables the reinforcement to be defined by two-dimensional
+layers (with constant spacing, diameter, and material). Each attribute in the database is
+accompanied by a required data type, which defines the specific format MySQL expects
+when storing the value. These data types are fixed. If a value is entered in an incorrect
+format, it triggers programmatic errors that prevent the data from being stored until the
+10
+
+===== PAGE 16 =====
+Hernández Vargas et al. (2025) Guidelines for a
+database of reclaimed precast concrete elements
+format is corrected. The most common data types used during the collection process
+include the following:
+•
+Strings: sequences of characters of variable length, typically used for names,
+codes, or descriptions.
+•
+Integers: whole numbers used when fractional values are not expected or
+necessary.
+•
+Floats: represent numbers that may include decimal points and are generally
+stored with a precision of up to seven decimal digits.
+•
+Boolean: record binary values, typically expressed as TRUE or FALSE.
+•
+Vectors: arrays containing two or more numeric values, often used to express
+spatial coordinates such as (x, y) or (x, y, z).
+The choice between using an integer or a float primarily depends on the precision required
+by the dataset. In many cases, floats are used when it is unclear whether a value may
+include decimal places. This approach avoids unnecessary errors while maintaining a
+flexible data model that accommodates diverse measurement conditions.
+Data validation plays a central role in ensuring the reliability of the database. An important
+feature of EER diagrams is the clarification of Null vs. Not Null constraints. When building the
+database in MySQL, the schema requires a priori knowledge of whether an attribute can
+accept Null (empty or missing) inputs or whether it is mandatory to include a value (Not
+Null). This distinction is embedded within the database structure. Hence, during data
+collection, if the spreadsheet contains missing data that the RDBMS expects, loading errors
+will prevent the data from being uploaded. The tables in the following sections specify
+whether each attribute is optional or mandatory.
+Data collection is managed through Microsoft Excel templates prepared in a format that
+reflects the information in Tables 1Table 1 to 13. The data is recorded manually for each
+element within a deconstruction project. Explanations of the required attributes are
+presented throughout Chapter 3. For guidance on the expected formatting of the data while
+moving through the process, refer to the data types specified in Section 3.3. To check
+whether a field is optional or mandatory, refer to the constraints outlined in the relevant
+table in Tables 1 to 13. Null means that the attribute is optional, and Not Null indicates that it
+is a mandatory parameter.
+The following sections outline the inputs for each table based on the accompanying XLSX
+templates, the data structure, and the formatting required throughout the data collection
+stage. Flexible and robust Cartesian mapping conventions were adopted to capture any
+irregular or complex designs often seen in precast systems adaptively. Spatially capturing
+the geometrical and reinforcement properties will allow the elements to be more effectively
+remodelled and utilised to their full capabilities in new structural designs.
+3.1. Donor building data
+11
+
+===== PAGE 17 =====
+Hernández Vargas et al. (2025) Guidelines for a
+database of reclaimed precast concrete elements
+The donor building data can be found in the yellow tables in the top left corner of Figure 1.
+The Donor Building and Circularity Data tables only require a single record (row) for each
+deconstruction project. This data includes location, age, taxonomy, size, and circularity
+information. Any additional information that seems useful can be included in the Notes
+attribute. Table 1 below summarises the expected information for the Donor Building and
+Circularity Data tables.
+Table 1. Donor Building Metadata attributes and descriptions.
+Attribute [data type] Constraint Description
+Building ID [string] Not Null A multi-faceted taxonomy system of descriptive
+acronyms based on Hernández et al. (2025) and
+Stenberg et al. (2025). Figure 5 illustrates
+example taxonomies, where more information
+can be found in the resources mentioned above.
+Name [string] Not Null e.g. ‘Prinsenhof A’ – ideally treated as a unique
+identifier.
+Building Type [string] Not Null e.g., office building, industrial building, etc. –
+based on the donor building function.
+Coordinates [float] Not Null Latitude and longitude coordinates (not GPS).
+Country [string] Not Null The country where the building was constructed.
+City [string] Not Null City where the building was constructed.
+Construction Year Not Null Numerical integer of the construction year.
+[year]
+Deconstruction Year Not Null Numerical integer of the deconstruction year.
+[year]
+Deconstruction Not Null Name of the deconstruction company.
+Company [string]
+Consequence Class Null CC based on Eurocode 1990-1:2023. Optional in
+[string] case it is initially unknown – can be later
+updated.
+Exposure Class Null XC based on EN 206:2013+A2:2021. Optional in
+[string] case it is initially unknown – can be later
+updated.
+Total Floor Area Not Null Total deconstructed floor area, in m2.
+[float]
+12
+
+===== PAGE 18 =====
+Hernández Vargas et al. (2025) Guidelines for a
+database of reclaimed precast concrete elements
+Number of Wings [int] Not Null If the donor building included sub-buildings. E.g.
+Prinsenhof had a high-rise, low-rise, and core
+component.
+Number of Storeys Not Null Written as a vertical list of integers for each sub-
+[list of integers] building.
+Number of Elements Not Null The number of elements by type that were
+deconstructed in sufficient condition for reuse. If
+they are not expected to be reused, do not count
+them here.
+Notes [text] Null Any additional notes that might be useful to
+future designers (optional).
+3.2. Element metadata
+The metadata tables include a large amount of taxonomic information for each element.
+The [Element ID] attribute (e.g., Wall ID, Beam ID, etc.) is a facet-based classification system
+to serve as a unique, human-readable descriptor for each element (Hernández Vargas et
+al., 2025). Drawing upon research mapping pan-European precast concrete systems by
+Stenberg et al. (2025), the Building ID and element-type IDs encode the primary facets
+(project, manufacturer, year, location), substituting UNK placeholders for any unknown
+facets. Although these taxonomies are not replacements for formal national or international
+classification systems, they should be embedded into the Common Data Environment
+(CDE) for the given project (Dervishaj & Gudmundsson, 2025; ISO, 2019a). Figure 5 illustrates
+the general conventions with examples from the Swedish donor building. For more details
+on the different facets and acronyms, refer to Hernández Vargas et al. (2025). Table 2
+summarises the expected information for the element metadata tables, with distinctions
+between any nuances related to the element type.
+Figure 5. Building ID contains the taxonomic information from the precast system.
+13
+
+===== PAGE 19 =====
+Hernández Vargas et al. (2025) Guidelines for a
+database of reclaimed precast concrete elements
+Table 2. Element Metadata attributes and descriptions.
+Attribute [data
+Constraint Description
+type]
+Wall ID, Beam ID, Column ID, or Slab ID based on
+Element ID [string] Not Null
+Figure 5, b.
+Building ID [string] Not Null Same as Table 1 and Figure 5, a.
+Unique ID specified in the original construction that
+identifies the unique product geometry. To avoid
+Product ID [string] Not Null repetition across projects and ensure uniqueness,
+include the building project number as a prefix,
+e.g. 5415_HG01.
+Unique ID specified in the original construction that
+Reinforcement ID identifies a unique reinforcement design. Allows
+Null
+[string] null in case drawings are not available. Include the
+project number as above.
+Wall: loading-bearing façade, internal wall, etc.
+Beam: rectangular, half-joint, T-beam, I-beam, etc.
+Element Type
+Not Null Column: rectangular, elliptical, headed, or I-
+[string]
+section.
+Slab: hollow-core slab (HCS) or solid slab.
+Wing [string] Not Null Sub-building ID or name as described in Table 1.
+Floor number where the element was in the donor
+Floor Number [int] Not Null
+wing.
+Azimuth degrees format (0-359°). For standard
+Orientation [int] Not Null mapping, N=0, E=90, S=180, and W=270 (Only for
+wall elements).
+Grid Position Element position based on original construction
+Null
+[string] drawings when available.
+Coating Layer Does the element have any surface protection
+Null
+[Boolean] (e.g., plaster)?
+“Active” for stored and available for reuse,
+Status [string] Not Null “Pending” if under consideration for a new design,
+“Unavailable” if currently used in a new structure.
+Have any tests (material properties, degradation,
+Has Tests [Boolean] Not Null durability, QA, etc.) been performed on the
+element?
+Does the element exhibit any damage that needs
+Has Damage
+Not Null to be repaired or removed before being
+[Boolean]
+installation-ready?
+Class description of element condition (following
+Intervention Class Not Null QA): “Installation-Ready”, “Maintenance”,
+“Strengthening”.
+Storage Lat/Long Latitude and longitude coordinates of the storage
+Not Null
+[string] location (not GPS).
+14
+
+===== PAGE 20 =====
+Hernández Vargas et al. (2025) Guidelines for a
+database of reclaimed precast concrete elements
+Any additional notes that might be useful to future
+Notes [text] Null
+designers (optional).
+3.3. Element geometry
+For storage and interchange inside the database, geometric representations are encoded
+as Well-Known Text (WKT) geometries, following the Open Geospatial Consortium (OGC)
+Simple Feature Access model (Open Geospatial Consortium, 2011). WKT is a text markup
+language used to describe vector-based geometric objects such as points, lines, polygons,
+and their compound forms, including 2D, 3D, and additional measures along a linear
+referencing system. Alongside WKT, a binary counterpart, Well-Known Binary (WKB),
+provides a more compact format that is generally preferred for efficient storage, although
+less human-interpretable. These notations are formalised in the broader
+ISO/IEC 132493:2016 standard, which defines how spatial data types and operations are
+implemented within SQL database systems (ISO, 2016b).
+y
+20
+a) POINT (4 15)
+a b
+b) LINESTRING (12 14, 14 18, 17 14, 20 18)
+c) POLYGON ((3 3, 5 9, 11 9, 9 3))
+10
+c d d) POLYGON ((17 2, 16 9, 27 13, 25 2),
+(20 4, 19 8, 23 9, 23 5))
+0,0 10 20 30
+x
+Figure 6. Examples of geometry definitions in well-known text (WKT) notation.
+WKT supports a range of primitives, including POINT, LINESTRING, POLYGON, MULTIPOLYGON,
+and even complex types such as TIN (Triangulated Irregular Network) and
+GeometryCollection. It can express 2D, 3D (with “Z”), measured geometries (with “M”), or
+both (with “ZM”).
+In practice, element perimeters are stored as POLYGON Z in the element’s local coordinate
+system, with inner rings representing voids (e.g., openings, recesses), and linear features
+(edges, cut lines) as LINESTRING Z. MySQL 8.x natively accepts these WKT types and enforces
+the topological closure requirement for polygons; ring orientation is normalised internally,
+so both clockwise and counterclockwise inputs are acceptable. Volumetric encodings, such
+as POLYHEDRALSURFACE or TIN, are avoided in the core store because they are not part of
+MySQL’s supported set. Thickness and other extruded attributes are recorded explicitly as
+alphanumeric fields, which also keeps IFC export mappings straightforward.
+15
+
+===== PAGE 21 =====
+Hernández Vargas et al. (2025) Guidelines for a
+database of reclaimed precast concrete elements
+Coordinates are recorded in a right-handed local system where x denotes length, z height,
+and y thickness. To remain compatible with WKT’s (x, y, [z]) ordering, profiles are encoded
+as (x, z, y) when using Z ordinates; units are millimetres throughout. Polygon rings are closed
+by repeating the first vertex as the last; degenerate segments are disallowed by validation.
+When global geolocation is needed (e.g., for GIS queries), a separate centroid or placement
+is stored as a POINT with an EPSG SRID (typically 4326) and, where appropriate, the project’s
+engineering CRS is described using WKTCRS as per ISO 19162, allowing unambiguous axis
+and unit declarations and transformations (ISO, 2019b).
+y
+a) b) c)
+(x₁, y₁) (x₂, y₂)
+y
+(0, b) (x₁, y₁) (x₂, y₂)
+r₁ r₂
+(‑a, 0) (a, 0)
+x x
+r₀ r₃
+(0, ‑b)
+(x₀, y₀) (x₃, y₃)
+(x₀, y₀) (x₃, y₃)
+Figure 7. Geometric definitions for different cross-sections: a) elliptical, b) rectangular,
+c) including corner radius. Although these conventions are specified generically for
+all element types, the elliptical cross-section is only used in columns.
+The Cartesian coordinate system used to define the geometry of an element without being
+constrained to generic physical descriptors is illustrated in Figure 7. Following a traditional
+orthographic layout (elevation, cross-section, and plan view), the idea is to record the 2D
+coordinate position of every critical junction or discontinuity along the perimeter of the
+element. Standard CAD/BIM axis conventions are used for each view, shown in Figure 8,
+where describes the global length, is the global height, and is the global thickness.
+Voids geometries are considered in a sub-table, so only the parent element geometry
+𝑥𝑥 𝑧𝑧 𝑦𝑦
+needs to be mapped for this stage. In brief, the process for recording the wall geometry is:
+1. Using Western mathematical convention (left to right, bottom to top), identify the
+origin point in each orthographic view.
+2. After identif(y0in,0g) the origin, move clockwise around the perimeter of each view,
+recording the coordinates at each junction. If ever in doubt whether a point is
+necessary, think whether the overall geometry could be digitally remade if it was
+missing, and otherwise include it.
+3. An optional radius/bevel component is included with every point to describe any
+junctions or corners containing curvature or small tapered edges. If no curve or
+bevel is present, insert .
+4. List each new coordina𝑟𝑟t=e 0point vertically in the spreadsheet to create a list. The
+coordinates can either be stored as integers or floats, depending on the level of
+accuracy available. Measurements are always recorded in mm.
+5. Repeat for the next unique wall geometry.
+16
+
+===== PAGE 22 =====
+Hernández Vargas et al. (2025) Guidelines for a
+database of reclaimed precast concrete elements
+X Y z
+p 0 0 0
+p 1 0 400 Isometric
+p 2 6450 400
+Plan (XY) p 3 6450 400
+y
+p p
+1 2
+x
+p
+0 p
+3
+X Y
+p 0 0 x
+0
+p 0 440
+1
+p 6230 440
+2
+p 6230 320
+3
+p 6450 320 y
+4
+p 6450 0 X Y
+5 p 0 0
+Side (YZ) Front (XZ)0
+p 0 440
+z p p 0 1 p p 3 2 p p 4 z p p 0 1 p p 3 2 p p 2 3 1 4 4 0 0 0 0 44 0 0
+5
+y x
+Figure 8. Encoding example showing the relationship between the coordinate encoding using
+WKT, their meaning in orthogonal views, and the resulting 3D model.
+3.3.1. Walls
+Data collection from reclaimed wall elements includes façade elements and internal walls.
+These elements follow the standard mapping conventions described previously in Section
+3.3. Since walls generally have the most complex geometries and reinforcement designs,
+load-bearing façades from the Prinsenhof donor building are used for visual examples.
+Figure 9 represents a typical façade geometry used in Prinsenhof (Product ID: 5415_G01).
+Every unique wall geometry from a deconstruction project will have its geometry mapped
+and recorded here. There is no need to repeat this process for every element; only those
+with unique geometries that can be linked to the Wall Element table by the Product ID
+attribute (PK). The geometry considered in this table is for the load-bearing component
+only. If the additional outer sandwich layers, including the insulation layer, are kept for future
+designs, these geometries are stored in a connecting sub-table (see Table 5). Table 3
+summarises the expected information for the ‘Wall Geometry’ table.
+17
+
+===== PAGE 23 =====
+Hernández Vargas et al. (2025) Guidelines for a
+database of reclaimed precast concrete elements
+Figure 9. Geometric definition of the facade element G01 from the Prinsenhof A
+donor building in the Dutch pilot project. Please note that some details may
+differ from the actual element for representation purposes.
+18
+
+===== PAGE 24 =====
+Hernández Vargas et al. (2025) Guidelines for a
+database of reclaimed precast concrete elements
+Table 3. Wall Geometry attributes and descriptions.
+Attribute [data type] Constraint Description
+Product ID [string] Not Null Unique Product ID matching Table 2.
+Reinforcement ID [string] Not Null Unique Reinforcement ID matching Table 2.
+A precast wall with identical geometry may be
+Mirrored Design?
+Not Null reflected about an axis to fit in a different position in
+[Boolean]
+the donor building – e.g. a corner or boundary element.
+Number of elements sharing this geometry [Product
+Count [integer] Not Null
+ID], which are defined in Table 2.
+Coordinate system as described above, based on the
+Front View Coordinates
+Not Null front elevation of the orthographic drawing and
+[list of points ]
+relevant axes.
+(𝑥𝑥,𝑧𝑧,𝑟𝑟)
+Coordinate system as described above, based on the
+Side View Coordinates [list
+Not Null cross-sectional view of the orthographic drawing and
+of points ]
+relevant axes.
+(𝑦𝑦,𝑧𝑧,𝑟𝑟)
+Coordinate system as described above, based on the
+Plan View Coordinates [list
+Not Null plan view of the orthographic drawing and relevant
+of points ]
+axes.
+(𝑥𝑥,𝑦𝑦,𝑟𝑟)
+A Boolean indicating whether any additional (non-
+Sandwich Panels
+Not Null structural) panels are left attached to the load-
+[Boolean]
+bearing component.
+Concrete Strength Class Concrete class based on original design
+Not Null
+[string] specifications.
+Maximum aggregate used in concrete mixture
+Max Aggregate Size [int] Null
+(optional).
+Type of concrete mix to determine density. Options
+Concrete Type [string] Null may include: “Normal”, “Lightweight”, “Insulating
+ultralight”, “UHPC”, “Heavyweight”, “Pervious”.
+Wall voids
+The number of voids in a wall element typically determines the reinforcement design and
+specific reference system used to map the reinforcement. In a general sense, voids are
+defined as any recess bounded by at least three sides within the governing geometry.
+Hence, windows and doors are considered voids, whereas overhangs/cantilevers are
+deemed part of the overall geometry (similar for corbels, but these are treated as separate
+entities). Voids are linked to the global geometry through the Product ID attribute, which
+functions as a primary and foreign key.
+The 3D coordinates are recorded for every void corner throughout the thickness of
+the element. Any non-uniformity through the parent thickness or pitching is captured within
+(𝑥𝑥,𝑧𝑧,𝑦𝑦)
+the list of coordinates. The terminology for the different areas of a wall element is described
+in Section 3.3.1. Each point is vertically listed in the spreadsheet, similar to the geometry
+coordinates in Section 3.3. If there are no voids in the wall system, record a zero under the
+Void Count attribute and leave the other attributes empty – this will supersede the Not Null
+constraints for the other attributes. Table 4 summarises the expected information for the
+Wall Voids table.
+19
+
+===== PAGE 25 =====
+Hernández Vargas et al. (2025) Guidelines for a
+database of reclaimed precast concrete elements
+Table 4. Wall Voids table attributes and descriptions.
+Attribute [data type] Constraint Description
+Void Count [int] Not Null The number of voids within a geometry.
+Void Coordinates The 3D coordinates at each corner or
+Not Null
+[list of points ] geometric change are written as a vertical list.
+(𝑥𝑥,𝑧𝑧,𝑦𝑦)
+Additional panelling
+If any of the original sandwich panels are kept intact with the load-bearing component for
+use in future designs, the geometry can be mapped in this sub-table. These may include
+outer façade panels, exterior design finishes, insulation layers, or any other layer that does
+not contribute to the structural resistance of the principal wall element.
+Table 5 treats the mapping for insulation layers and other panel types separately. This
+arrangement allows for slightly more freedom when mapping panels with irregular
+geometries, such as outer cladding, aesthetic layers or exterior architectural panels, while
+maintaining simplicity with insulation. Similar to Table 3, an optional radius or bevel
+component can be added to each coordinate point to describe curved, rounded, or tapered
+edges. If none are present, insert zero or leave blank. The external finishing and design
+parameters in Table 5 are currently optional placeholders which will be explored in more
+detail in future versions.
+Table 5. Additional Panelling table attributes and descriptions.
+Attribute [data type] Constraint Description
+Product ID [string] Not Null Unique Product ID matching Table 2.
+A Boolean for whether the panels have voids or
+Has Void [Boolean] Not Null
+not.
+Lists of coordinates as described in Section 3.3.1,
+Panel Front
+based on the front elevation of the orthographic
+Coordinates [list of Null
+drawing and relevant axes. Use the same origin
+points ]
+point as Table 3.
+(𝑥𝑥,𝑧𝑧,𝑟𝑟)
+Lists of coordinates as described in Section 3.3.1,
+Panel Side
+based on the cross-sectional view of the
+Coordinates [list of Null
+orthographic drawing and relevant axes. Use the
+points ]
+same origin point as Table 3.
+(𝑦𝑦,𝑧𝑧,𝑟𝑟)
+Lists of coordinates as described in Section 3.3.1,
+Panel Plan
+based on the plan view of the orthographic
+Coordinates [list of Null
+drawing and relevant axes. Use the same
+points ]
+reference origin point as Table 3.
+(𝑥𝑥,𝑦𝑦,𝑟𝑟)
+An optional aesthetic description of the panel
+Panel Design Finish
+Null finish, which may include terms such as smooth,
+[string]
+textured, rough, etc.
+20
+
+===== PAGE 26 =====
+Hernández Vargas et al. (2025) Guidelines for a
+database of reclaimed precast concrete elements
+Insul. Front List of coordinates for the front view of the
+Coordinates [list of Null insulation layer. Use the same reference origin as
+points ] Table 3.
+(𝑥𝑥,𝑧𝑧) List of coordinates for the side view of the
+Insul. Side Coordinates
+Null insulation layer. Use the same reference origin as
+[list of points ]
+Table 3.
+(𝑦𝑦,𝑧𝑧)
+List of coordinates for the plan view of the
+Insul. Plan Coordinates
+Null insulation layer. Use the same reference origin as
+[list of points ]
+Table 3.
+(𝑥𝑥,𝑦𝑦)
+Additional technical notes that might be useful to
+Notes [text] Null designers, including any details missed by the
+attributes.
+When mapping the coordinates of extra panels, it is crucial to use the same local origin as
+defined in the primary geometry. Coordinates are recorded as lists following the same
+convention as Table 3 and outlined in Section 3.3. To simplify the data collection, no
+reinforcement is considered in these layers, only the geometrical properties.
+Wall connections
+The Wall Connections table describes any internal connections within the wall geometry
+that were recovered or can be recovered post-deconstruction. For example, in element G01
+in Figure 9, two M20 (20 mm diameter) bolt connections are fixed into the upper boundary
+with an approximate depth of 165 mm. The connections extended above and inserted into
+voids in the underside of the next wall. The voids were then backfilled with grout or mortar
+to create the wall-to-wall connection during assembly. Theoretically, even once the
+connection is cut along the wall boundary during deconstruction, the ungrouted rod
+component can be removed without damaging the inlaid thread, making the connection
+reusable. It is assumed that the grout-filled voids will not be cored out after deconstruction;
+however, this is also possible. Therefore, it is helpful to include any existing connections that
+can be recovered to serve future designs. Another typical example is wall-to-wall starter
+bars, which follow the same premise as the bolted connections, where the upper
+component can be removed after deconstruction (illustrated in Annex A, Figure A1).
+Each record in the spreadsheet describes a single connection (no lists) and includes the 3D
+point location, depth, diameter, and a type description (e.g. bolted, starter bar, etc.). If the
+diameter of a bar or bolted connection is given as a string (e.g. M20, M24, etc.), convert it
+into an integer or float when recording the data. If no recoverable connections exist,
+inserting a zero into the Count attribute will override the Not Null constraints for the other
+attributes, which can be left empty.
+Table 6 summarises the expected information for the Wall Connections table.
+Table 6.Wall Connections table attribute and descriptions
+Attribute [data type] Constraint Description
+Count [int] Not Null Integer counting the number of recoverable connections.
+21
+
+===== PAGE 27 =====
+Hernández Vargas et al. (2025) Guidelines for a
+database of reclaimed precast concrete elements
+Location Coordinates 3D point location of each recoverable connection. E.g., G01
+Not Null
+[point ] has two connections: and .
+Depth [float] Not Null Connection depth in mm. Integer or float.
+(𝑥𝑥,𝑧𝑧,𝑦𝑦) (200,3480,90) (3384,3480,90)
+Diameter [float] Not Null Diameter in mm. Integer or float.
+Connection Type Description of connection. Recorded in uppercase letters,
+Not Null
+[string] e.g., BOLTED or STARTER BAR.
+Additional technical notes might be useful to designers,
+Notes [text] Null
+including any details missed by the attributes.
+Corbel geometry
+Corbels are treated separately from the primary geometry to simplify the shape and
+reinforcement modelling. The method for mapping corbel geometries is approached
+generically to improve efficiency within the database. A single table is dedicated to storing
+corbel information from walls, beams, and columns, which can be found in the central area
+of Figure 1.
+The mapping convention follows the same method as outlined in Section 3.3.1. However,
+since a corbel typically only occupies two planes, one view can be omitted for simplicity.
+The remaining plane is recorded in the Extruded Plane column (“XZ”, “YZ”, or “XY”), for
+downstream automated extrusion. For example, all necessary points can be captured from
+the side and plan views in Figure 9, so the front view (XZ) can be left empty.
+The proposed methodology also flexibly captures recesses and discontinuities in the corbel
+geometry. For example, element G01 has two 100 mm tapered recesses along its span
+(Figure 9). These are essential aspects to capture parametrically, as they influence the
+reinforcement design, development lengths, and support lengths for seated floor slabs. The
+orange markers in Figure 9 illustrate the coordinates to be recorded. Table 7 summarises
+the expected information for the Corbel Geometry table.
+Table 7. Corbel Geometry table attributes and description.
+Attribute [data type] Constraint Description
+Product ID [int] Not Null Unique Product ID matching Table 2.
+An integer for the number of corbels in a given
+Count [int] Not Null
+Product ID.
+The remaining plane is not parametrically
+Extruded Plane [string] Not Null described by the coordinates below. Choose
+from either XZ, YZ, or XY.
+Coordinate system as described above, based
+Front View Coordinates
+Not Null on the front elevation of the orthographic
+[list of points ]
+drawing and relevant axes.
+(𝑥𝑥,𝑧𝑧,𝑟𝑟)
+Coordinate system as described above, based
+Side View Coordinates
+Not Null on the cross-sectional view of the orthographic
+[list of points ]
+drawing and relevant axes.
+(𝑦𝑦,𝑧𝑧,𝑟𝑟)
+Coordinate system as described above, based
+Plan View Coordinates
+Not Null on the plan view of the orthographic drawing
+[list of points ]
+and relevant axes.
+(𝑥𝑥,𝑦𝑦,𝑟𝑟)
+22
+
+===== PAGE 28 =====
+Hernández Vargas et al. (2025) Guidelines for a
+database of reclaimed precast concrete elements
+Additional technical notes might be helpful to
+Notes [text] Null designers, including any details missed by the
+attributes.
+3.3.2. Slabs
+Slabs are divided into two main categories: solid and hollow-core slabs. Solid slabs present
+a straightforward geometric definition, which simplifies the identification of reinforcement
+and the arrangement of layers, while still accommodating the complexities introduced by
+inlaid voids for essential building services. On the other hand, hollow-core slabs represent
+a standardised solution in modern construction, with their geometry and structural
+properties readily described by a concise set of physical attributes.
+Solid slabs
+Solid floor slabs follow the same conventions as walls described in Section 3.3. Slab
+geometry is much simpler than that of walls, making the definitions of geometrical zones
+and reinforcement layers easier as well. The only noteworthy distinction here is that, unlike
+beams and columns, voids are again considered due to the possibility of inlaid voids for
+ducting, plumbing, and other installations. Otherwise, the approach for mapping the
+geometry, longitudinal reinforcement design, and transverse reinforcement design is
+described in Sections 3.3.1, 3.3.2, and 3.3.3.
+Hollow-core slabs (HCS)
+Prestressed hollow-core floors are a highly standardised slab design that can be
+parameterised in a more straightforward format than was necessary for the earlier element
+types. The general geometric and void properties, connections, structural topping details,
+and prestressing information are outlined in the following sections.
+HCS geometry
+The geometry of an HCS can be directly characterised by physical dimensions instead of a
+spatial system. Table 8 summarises the attributes required to describe a hollow-core slab.
+Figure 10. Typical hollow-core slab section from Prinsenhof A office complex.Figure
+10 provides a visual aid for deriving the required properties.
+Figure 10. Typical hollow-core slab section from Prinsenhof A office complex.
+23
+
+===== PAGE 29 =====
+Hernández Vargas et al. (2025) Guidelines for a
+database of reclaimed precast concrete elements
+Table 8. HCS Geometry table attribute and descriptions.
+Attribute [data type] Constraint Description
+Product ID [string] Not Null Unique Product ID matching Table 2.
+Reinf ID [string] Not Null Unique Reinforcement ID matching Table 2.
+Number of elements with identical geometry
+Count [integer] Not Null
+[Product ID].
+Height [int] Not Null Cross-sectional height, in mm.
+Length [int] Not Null Floor slab length, in mm.
+Width [int] Not Null Cross-sectional width, in mm.
+Void Count [int] Not Null Number of cores in the slab.
+Core diameter in the horizontal and vertical
+Void Diameter [float] Not Null
+directions (see Figure 10).
+Concrete cover depth to the bottom and top of
+Concrete Cover [float] Not Null
+the cores, in mm.
+External Web Thickness Thickness of the outer web between the slab
+Not Null
+[float] edge and outer core, in mm.
+Concrete Strength Concrete class based on original design
+Not Null
+Class [string] specifications.
+Known or approximated concrete density in
+Density [float] Null
+kg/m3.
+Max Aggregate Size Maximum aggregate used in concrete mixture
+Null
+[int] (optional).
+Additional technical notes that might be useful
+Notes [text] Null to designers, including any details missed by the
+attributes.
+HCS Connections
+The connections considered in HCS floor systems include:
+•
+Shear connections between slabs and walls (located along the outer edge) and
+their position in mm.
+•
+Longitudinal connections between slabs and walls (located at slab ends) and their
+position in mm.
+•
+Shear connections between adjacent slabs (located along the inner edge) and their
+position in mm.
+When a floor system is deconstructed, the connections between adjacent elements are
+sawn through. If the connections are left in the slab, designers must be aware that this area
+is compromised and cannot be used for future connections. Likewise, if the connection is
+removed, the void left in its place will likely be backfilled and cannot be used in future
+connections. For simplification, only the function and position of the connection are
+recorded. Designers can refer to the original drawings for specific details. If no connections
+are present, enter 0 in the data field.
+24
+
+===== PAGE 30 =====
+Hernández Vargas et al. (2025) Guidelines for a
+database of reclaimed precast concrete elements
+Structural topping
+For reuse purposes, knowledge about whether the structural topping layer is still attached
+to the slab is also necessary. Since the topping will have been sawn down the longitudinal
+edge of the slab during deconstruction, the diaphragm action it supplied can no longer be
+achieved. However, it is often left in place due to the significant difficulty of effectively
+removing the topping without damaging the slab. The topping will affect both structural
+and architectural design phases for reuse, so it needs to be accounted for in the database.
+Table 9 summarises the attributes required for the structural topping.
+Table 9. Structural Topping table attributes and descriptions.
+Attribute [data type] Constraint Description
+True or False Boolean identifying if a structural
+Present? [Boolean] Not Null
+topping is still in place.
+Thickness [int] Not Null Thickness of structural topping, in mm.
+Diameter of the steel mesh reinforcement inside
+Mesh Diameter [int] Null
+the slab, in mm (optional).
+Grid spacing (assumed uniform) of the steel mesh
+Mesh Spacing [int] Null
+reinforcement inside the slab, in mm (optional).
+HCS prestressing
+Prestressing information in HCS systems is critical for determining the slab’s load-bearing
+capacities. Table 10 summarises the attributes required for the prestressing design in
+hollow-core floor slabs. The prestressing layer describes all strands along the same
+horizontal x-axis position. The Layer Number, therefore, represents the relative position of
+the layer, starting at the base and incrementing vertically.
+Table 10. HCS Prestressing table attributes and descriptions.
+Attribute [data type] Constraint Description
+Reinf ID [string] Not Null Unique Reinforcement ID matching Table 2.
+Unique ID for each prestressing strand in an
+Strand ID [string] Not Null element. Serves as the primary key in the MySQL
+RDBMS.
+The prestressing layer number, starting from the
+Layer Number [int] Not Null
+slab base.
+Strand Coordinates The cross-sectional position of each prestressing
+Not Null
+[point ] strand.
+The number of wires used in each tendon, e.g. 1-
+(𝑥𝑥,𝑦𝑦)
+Number of Wires [int] Not Null
+wire, 3-wire, or 7-wire strand, etc.
+Strand Diameter
+Not Null Diameter of the prestressed tendon in mm.
+[float]
+Steel grade designation for the prestressed
+Strand Grade Null
+tendon.
+Additional technical notes that might be of use to
+Notes [text] Null
+future designers.
+25
+
+===== PAGE 31 =====
+Hernández Vargas et al. (2025) Guidelines for a
+database of reclaimed precast concrete elements
+3.3.3. Columns
+Data collection for column elements follows the same general principles and
+methodologies discussed in Section 3.3. Like beams, the process begins with mapping the
+geometry, longitudinal reinforcement design, and transverse reinforcement design. The
+primary differences between the walls and columns are:
+•
+The Void table has been removed.
+•
+The Additional Panelling table has been removed.
+•
+Elliptical and curved cross-sections are considered.
+Two primary cross-sectional types can be defined for columns: elliptical and rectangular
+cross-sections. An ellipse is described entirely by tangential coordinates. A tangent line is
+drawn between two infinitely close points on a plane curve, resembling a line parallel to the
+curved surface. Hence, a tangent line cannot be drawn relative to a straight edge, where
+the distance between two parallel points is no longer infinitesimally small. If the intersection
+of the tangents from four points of contraflexure along a curved surface creates a bounding
+rectangle, then the section is considered elliptical. If a curved section includes straight
+portions, then it is regarded as a rectangular section with curved edges. Circular sections
+are elliptical sections with a constant diameter. Similarly, square sections are rectangular
+sections of constant width. For the Cross-Section attribute in the Column Geometry table,
+record either elliptical or rectangular.
+3.3.4. Beams
+The data collection of beam elements conceptually follows the same mapping conventions
+and reference systems as the wall elements discussed throughout Section 3.3. In general,
+the process for collecting beam data involves:
+1. Mapping the geometry in a 2D orthographic format.
+2. Mapping the longitudinal steel design by defining the zone and layer reference
+systems.
+3. Mapping the transverse reinforcement design by defining the shape of the bars
+within each zone.
+By implementing zones, irregular cross-sections can be partitioned and simplified, enabling
+the reinforcement design to be more easily defined. The attributes used to describe steps 1
+to 3 above are the same as those used for walls. The only distinguishing differences are:
+•
+The Void table has been removed.
+•
+The Additional Panelling table has been removed.
+•
+The zone naming convention has changed. For beams, zones are designated as
+either flange (F) zones, web (W) zones, or a single zone (Z) for uniform sections.
+26
+
+===== PAGE 32 =====
+Hernández Vargas et al. (2025) Guidelines for a
+database of reclaimed precast concrete elements
+Figure 11. Zone allocation for different beam types.
+Figure 11 provides examples of beam elements and their possible zoning, along with the new
+naming convention. Remember that as long as the rules outlined in Section 3.3.2 are
+followed, the selected zones can vary based on the user’s preference. However, half-joints
+in beams are classified as part of the global geometry, not corbels, so the data should be
+structured accordingly.
+3.4. Reinforcement
+Spatially defining the reinforcement design is critical for assessing the role of an element in
+new structural designs. Without understanding the unique reinforcement design in each
+element, structural analyses cannot be performed, and the only reuse function a reclaimed
+element may serve is in a downcycled capacity (i.e. the demands in the new structure are
+less than in the original donor structure). Parameterising the longitudinal reinforcement
+design poses several challenges, particularly in wall elements. First, the frequency of voids
+and discontinuities increases the complexity of the design, while the designation of
+longitudinal and transverse axes varies with component function. To adaptively capture the
+reinforcement design in a robust manner that applies to systems with number of voids,
+elements are partitioned into zone and layer reference systems.
+𝑛𝑛
+A zone is defined as a continuous bounding polygon that extends from one discontinuity or
+void to the next. Each zone is described by a 2D polygon within its specified Zone Plane
+descriptor, corresponding to the primary cross-sectional view, assuming constant
+extrusion through the remaining plane. Wall zones can be classified as follows:
+27
+
+===== PAGE 33 =====
+Hernández Vargas et al. (2025) Guidelines for a
+database of reclaimed precast concrete elements
+•
+Base (B): Horizontal wall zones beneath voids (sills).
+•
+Header (H): Horizontal wall zones above voids (lintels).
+•
+Flank (F): Vertical flanking zones beside voids (walls).
+•
+Single (Z): Uniform geometry without voids or discontinuities.
+•
+Corbel (_C): Dedicated zones for corbels, prefixed by primary zone (Fig. 3.4).
+Hence, the number of zones within an element depends on the frequency and location of
+voids. Figure 12 represents a single-void system, whereas a standard double-void system
+typically includes a door and a window. Annexe A presents examples of geometries with
+different voids and zones. The sum of all zone areas should encompass the entire geometry
+of the element. Figure 12 illustrates the zone reference system for element G01.
+Once the element geometry has been completely partitioned, reinforcement layers within
+each zone can be defined. A layer describes a set of reinforcing bars with constant
+diameter, spacing, and steel grade within the same plane. Zones and layers follow a few
+simple rules:
+•
+Zones must encompass the entire length of each reinforcement layer within that
+zone, with no partial coverage.
+•
+Layers must maintain uniform spacing, diameter, and grade, with any variation
+requiring a new layer.
+•
+Layer positions are recorded as centre-to-centre measurements.
+Therefore, the process of mapping the longitudinal reinforcement design can be
+summarised into the following steps, using Figure 12 and Figure 13 guides:
+1. Identify all of the zones within an element and record the polygon coordinates (e.g.,
+).
+2. �Id(𝑥𝑥e1n,t𝑧𝑧i1f)y, (t𝑥𝑥h2e, 𝑧𝑧o2r)i�entation and number of layers within each zone (see Figure 13).
+3. In the first zone, select the first bar in the layer (closest to the origin or axis).
+4. Define the start and end points of the bar, resembling a linestring.
+5. Define the number of bars within the layer, the diameter of the bars, the spacing,
+and the steel grade.
+6. Move on to the next layer within the zone and repeat.
+7. Avoid recording duplicates of any layers or bars. Each layer or bar only needs to be
+recorded once.
+When corbels are present, they are assigned their own zone and receive the necessary
+reinforcement layers. In Figure 13, although the 5 mm longitudinal rebars in the corbels are
+aligned with identical bars in zone H1, the spacing varies, so the corbel reinforcement is
+given its own layers L1 and L2 (within zone H1C). The zone ID assigned to a corbel zone should
+start with the same zone name as the overall section it is located in, suffixed by a ‘C’,
+followed by an incrementing integer (Figure 12).
+28
+
+===== PAGE 34 =====
+Hernández Vargas et al. (2025) Guidelines for a
+database of reclaimed precast concrete elements
+Figure 12. Example zoning convention for Prinsenhof façade element G01.
+Table 11 summarises the expected information for the Wall Long Reinforcement table. The
+concrete cover is separated into the directions to account for situations of non-
+uniform cover around the section. Additionally, depending on the position of the
+(𝑥𝑥,𝑦𝑦,𝑧𝑧)
+reinforcement layer, the reported depth to the concrete surface may be associated with a
+different global axis, which can be specified using this format, while entering zero for the
+other axes. The construction confidence margin specified in the original drawings is also
+required. If a wall is mirrored in Table 3, there is no need to create a new record of the
+reinforcement design; the mirrored design can be linked to the original design via the
+Reinf ID.
+There is a substantial amount of freedom when it comes to defining the zone and layer
+reference systems. So long as all steel reinforcement is accounted for within an element
+with the correct geometrical and spatial properties, then the specific details of how the
+zones are defined are less critical. Element KG03 illustrates an excellent example of this in
+Figure A1. Here, the wall has no voids, but due to the irregular profile in the direction, the
+element could be subdivided into three zones – Flank 1 (F1), Flank 2 (F2), and Flank 3 (F3).
+𝑦𝑦
+The zones would be designated as flanks instead of base zones or headers because the
+primary load-bearing and bending reinforcement (longitudinal reinforcement) is oriented
+29
+
+===== PAGE 35 =====
+Hernández Vargas et al. (2025) Guidelines for a
+database of reclaimed precast concrete elements
+vertically. This approach enables changes in reinforcement sizes and spacings to be
+captured across different areas throughout the section. However, the same result could be
+achieved by using only a single all-encompassing zone, with the necessary spatial
+information captured in the layer data, since all rebar vertically span the same length from
+bottom to top. As long as changes in diameter and spacing are captured by creating new
+layers where necessary, any specific approach using the proposed generic framework will
+achieve the same outcome. The proposed methods offer a degree of improvement to the
+efficiency of the process and downstream modelling applications.
+Table 11. Wall Long Reinforcement table attributes and descriptions.
+Attribute [data type] Constraint Description
+Reinf ID [string] Not Null Unique Reinforcement ID matching Table 2.
+Name given to each zone. E.g. B1, F1, F2, H1, HC1.
+Zone ID [string] Not Null
+“C” is given to zones representing corbels.
+The plane that the polygon extends over. Either
+Zone Plane [string] Not Null
+XZ, YZ, or XY.
+Zone Start [point
+Not Null Starting zone coordinates (horizontal, vertical).
+]
+(Zℎo1n,𝑣𝑣e1 )End [point ] Not Null Ending zone coordinates (horizontal, vertical).
+(ℎ2,𝑣𝑣2) Sequential labelling of each layer, written as L[x]
+Layer ID [string] Not Null
+(Fig. 3.5).
+Concrete Cover [point Mean concrete cover depth in each direction, in
+Null
+] mm.
+(C𝑥𝑥o,𝑧𝑧n,𝑦𝑦c)rete Cover Construction confidence margin in cover depth
+Null
+Confidence (±) [int] specified in the original drawings (e.g. ± 5 mm).
+Layer Start Starting layer position (horizontal, vertical). Taken
+Not Null
+[point ] at the centre of the bar.
+Layer E(nℎd1, 𝑣𝑣 1) Ending layer position (horizontal, vertical). Taken
+Not Null
+[point ] at the centre of the bar.
+(ℎ2,𝑣𝑣2) Centre position of the first bar in the layer relative
+Layer Position [point] Not Null to the plane not included in Zone Plane (closest
+to the axis or origin).
+Number of Bars [int] Not Null Number of bars in the layer.
+Bar Diameter [int] Not Null The diameter of each bar in the layer, in mm.
+Centre-to-centre spacing between each bar in
+Bar Spacing [int] Not Null
+the layer (constant).
+Specified steel grade reported in the original
+Steel Grade [string]
+design documentation.
+Additional technical notes that might be useful to
+Notes [text] Null designers, including any details missed by the
+attributes.
+30
+
+===== PAGE 36 =====
+Hernández Vargas et al. (2025) Guidelines for a
+database of reclaimed precast concrete elements
+The anchoring conditions at the end of each rebar and layer are critical for several capacity
+estimations involving bond development lengths and stress-strain relationships. Ordinarily,
+hooks of various lengths, shapes, and radii are applied to the rebar ends to anchor them
+within the concrete. Systems of this variety can be considered layer anchorage systems,
+as they provide anchorage on a per-bar (per-layer) basis. However, hairpin systems (U-
+shaped bars) are often used as an alternative means of anchoring the reinforcement cage
+over a zone, rather than each bar individually. Therefore, the ratio of hairpins to layers is not
+always 1:1 (Figure 13), creating discrepancies when recording the data. The data collection
+templates separate anchorage systems into either layer or zone anchorage. Table 12
+summarises the attributes of both types of reinforcement anchorage.
+Table 12. Steel Anchorage table attributes and descriptions.
+Attribute [data type] Constraint Description
+Description of anchorage type in capital letters. E.g.
+Anchorage Type [string] Not Null
+HOOKED (layer), HAIRPIN (zone), NONE.
+Bent Angle (layer) Record the start (left or bottom) and end (right or top)
+Not Null
+[float] angle of any hook in degrees.
+Record the length of a hook at the start (left or bottom)
+Hooked length (layer)
+Not Null and end (right or top) of a bar. Enter zero if an end is
+[float]
+straight.
+Each bent angle in the hairpin. This allows irregular
+Bent Angle (zone) [float] Not Null
+shapes to be captured. Record each angle as a list.
+The radius of a bend, if it has curvature, in mm. Enter
+Radius [float] Not Null
+zero if there is no radius.
+Diameter [int] Not Null Diameter of hairpins, in mm.
+Spacing [int] Not Null Spacing between pins as specified in drawings, in mm.
+Number of Pins [int] Not Null Number of pins within the zone.
+The span over which the pins are spaced. Requires X,
+Pinned Span [string] Not Null
+Y, or Z as input.
+Any additional technical notes, e.g., if hairpins are only
+Notes [text] Null
+on one side or vary on either side of a zone.
+If no end conditions are applied to a bar, leave it empty in the datasheets. In this case, there
+should be hairpins or some other system providing anchorage to the bars or group.
+However, in the context of this database, the anchorage attributes only consider the end
+conditions of each bar or group of bars, not the development lengths based on code
+guidelines. For this reason, a straight rebar with no hooked conditions (no layer anchoring)
+and no hairpins (no zone anchoring) can be inserted as NONE in the Anchorage Type
+attribute. For zone anchorage, record properties only once, in the row corresponding to the
+correct zone in the spreadsheet.
+The transverse reinforcement design follows the longitudinal reference system developed
+earlier. Based on each zone, the shape of the transverse reinforcement is defined by
+recording a list of each critical point in the bent shape. This is achieved by specifying the
+2D plane in which the reinforcement is bent (XZ, YZ, or XY), the angle at each point in the
+shape, and the coordinates corresponding to the necessary plane. Such an approach
+enables the recording of irregular geometries without the need for a shape code typically
+31
+
+===== PAGE 37 =====
+Hernández Vargas et al. (2025) Guidelines for a
+database of reclaimed precast concrete elements
+found in manufacturing standards. This system assumes the transverse reinforcement is
+not bent in multiple directions and can be described in a 2D plane. If a stirrup has an open
+end or a transverse rebar has a straight end, enter 0 degrees into the bent angle.
+A zone can have more than one entry as long as it is correctly identified, which may be
+necessary when two parallel straight or bent rebars are placed in the element instead of
+stirrups. Each rebar layer should be recorded separately to capture any niche details. An
+example case can be found in element KG03 from the Prinsenhof data and in Figure A1.
+Table 13 summarises the attributes required to map the transverse reinforcement design.
+Table 13. Wall Transv Reinf table attributes and descriptions.
+Attribute [data type] Constraint Description
+Reinf ID [string] Not Null Unique Reinforcement ID matching Table 2.
+The identifier given to each zone, matching Table
+Zone ID [string] Not Null
+11.
+Description of transverse reinforcement type, e.g.,
+Description [string] Not Null closed stirrup, open stirrup, bent rebar, straight
+rebar, etc.
+Bar Diameter [int] Not Null Diameter of transverse reinforcement, in mm.
+Spacing [int] Not Null Spacing of reinforcement within the zone, in mm.
+Number of bends in the reinforcement shape. This
+Num. Bends [int] Not Null value should match the length of the Shape list
+next.
+The plane over which the transverse reinforcement
+Bent Plane [string] Not Null is bent (based on the orthographic drawing) – XZ,
+YZ, or XY.
+A list of three points at each bend in the shape.
+Shape Includes an angle, , and the coordinates
+Not Null
+[list of points ] matching the Bent Plan𝜃𝜃e entered above – i.e. one
+(𝜃𝜃,𝑥𝑥,𝑧𝑧,𝑦𝑦) axis will be left empty.
+The span over which the transverse reinforcement
+Span Axis
+Not Null is spaced, i.e. whatever axis is not included in the
+[string]
+Bent Plane – X, Y, or Z.
+Span Position
+Not Null The start and end points of the reinforced span.
+[string]
+Specified steel grade reported in the original
+Steel Grade [string] Not Null
+design documentation.
+Additional technical notes that might be useful to
+Notes [text] Null designers, including any details missed by the
+attributes.
+32
+
+===== PAGE 38 =====
+Hernández Vargas et al. (2025) Guidelines for a
+database of reclaimed precast concrete elements
+Figure 13. Reinforcement design in Prinsenhof element G01 in the Dutch pilot.
+33
+
+===== PAGE 39 =====
+Hernández Vargas et al. (2025) Guidelines for a
+database of reclaimed precast concrete elements
+3.5. Material properties
+The material specifications from historical national standards are stored in a collective
+library within the database. The database is structured so that only the concrete strength
+class or steel grades are required for input in Tables 3, 8, 10, 11, and 13. The class or grade
+specifications are then linked to the properties library via an FK relationship. Manufacturing
+standards from the 20th and 21st centuries have been collected and stored from each
+country, including the modern Eurocode provisions. Material properties from standards
+dating back to 1918 for reinforcing steel and 1918 for concrete have been collected from each
+ReCreate partner country. This work is ongoing, and to further build and improve the
+libraries, it would be beneficial for each country cluster to review its archives and
+incorporate information from its respective country codes into the libraries. The material
+libraries are publicly available at the following Zenodo repository:
+https://doi.org/10.5281/zenodo.16809569.
+34
+
+===== PAGE 40 =====
+Hernández Vargas et al. (2025) Guidelines for a
+database of reclaimed precast concrete elements
+4. Data storage
+To record elements into the database, each component must be analytically
+deconstructed into a comprehensive set of parametric descriptors (see Chapter 3). These
+descriptors serve as the foundation for reconstructing accurate 3D digital models, enabling
+architects and engineers to incorporate reclaimed elements into new structural designs. To
+demonstrate and evaluate this approach, proof-of-concept (PoC) workflows have been
+developed, showing how digital modelling can effectively support element reuse.
+The repository is organised into four, clearly scoped directories:
+•
+schemas/ holds DDL (Data Definition Language scripts) that create the database
+structure for the Core, Physical properties and Analysis schemas and seed data for
+reference tables. DDL refers to the SQL commands used to define or alter database
+objects such as tables, views, or indexes.
+•
+models/ contains the conceptual EER models (see Section 2.3) exported as
+editable diagrams, which mirror the DDL and help reviewers validate keys, relations
+and cardinalities.
+•
+configs/ provides YAML configuration files that declare field mappings between the
+XLSX templates and the Core schema and, separately, between the Core and the
+Physical properties or Analysis schemas.
+•
+source/ stores the Python codebase: the command-line loader, extract–
+transform–load (ETL) routines, WKT parsing utilities and other helper functions.
+The repository targets Python 3.9 and MySQL 8.0 or superior. Installation consists of creating
+the three schemas, applying the DDL scripts in sequence and granting restricted roles for
+loaders and readers. Connection and runtime settings are provided through environment
+variables or a .env file, such as DB_URI, DB_USER, DB_PASSWORD, SRID_DEFAULT, LOG_LEVEL,
+and BATCH_SIZE. Configuration files in configs/ define the mapping from spreadsheet
+columns to database attributes, including unit conversions, controlled vocabularies and
+default values for optional fields. These mappings are explicit and versioned, ensuring that
+data imports remain reproducible even as templates evolve.
+4.1. Donor element database
+The current implementation includes entries from the donor buildings in all four ReCreate
+pilot countries: Sweden, Finland, the Netherlands, and Germany. These deconstructed
+buildings included apartment buildings, office complexes and an industrial warehouse.
+These real-life projects provided both practical insights and theoretical reflections on how
+to plan and execute deconstruction processes in real-world conditions (Vullings et al.,
+2024). Importantly, the reclaimed components encompassed all four precast element
+types in the database, each of which is now slated for reuse in forthcoming construction
+projects.
+35
+
+===== PAGE 41 =====
+Hernández Vargas et al. (2025) Guidelines for a
+database of reclaimed precast concrete elements
+a) b)
+c) d)
+Figure 14. Donor buildings for each of the ReCreate pilot projects: a) Finland, b) Germany,
+c) Sweden, and d) the Netherlands.
+Data was collected from technical drawings, deconstruction audits, and digital scans. Each
+entry includes geometric data, classification metadata, and reinforcement layout. The
+donor database is used to identify available elements for reuse in new projects and also
+serves as a test case for digital modelling routines and structural capacity estimation.
+Elements are linked to their building of origin and cross-referenced with system-level
+typologies to support traceability.
+The current PoC workflow for data collection relies on XLSX templates, prepared individually
+for each precast element type. In its early stages, data was gathered manually, with
+information extracted directly from available construction drawings and test
+documentation. This manual approach was a deliberate choice during the conceptual
+phase, as it enabled a more thorough and contextual understanding of the reuse chain
+before pursuing automation. To support this process, the authors have prepared a
+comprehensive data collection guideline that outlines every relevant variable, including
+data types, formatting conventions, and validation constraints associated with the XLSX
+templates. The full documentation and template package are accessible via the project’s
+public repository, offering a reproducible reference for future users.
+4.2. Automated capacity estimation
+The current database schema enables a multi-stage pipeline to perform automated
+structural capacity estimations in accordance with the Eurocode. The system transforms
+36
+
+===== PAGE 42 =====
+Hernández Vargas et al. (2025) Guidelines for a
+database of reclaimed precast concrete elements
+the parametric and scalar information stored in the Core schema into physical properties,
+which are then fed into the Analysis schema to provide bending capacity estimations that
+can be applied to beams and slab elements. For this, the data collected from the Excel
+templates is imported as a relational MySQL schema, where the data is normalised. Then,
+the physical properties schema automatically calculates attributes from the core schema
+processing dimensions, volumes, masses, centroids and other measurable properties.
+These results are populated into a separate schema, keeping a distinction between manual
+records and derived metrics, while preserving provenance. YAML-based mapping files
+allow for standardised calculations.
+The Analysis pass applies structural formulae to the combined Core and Physical properties
+data, populating a separate Analysis schema. The current implementation demonstrates
+automated flexural resistance checks for reinforced concrete beams, following Eurocode
+principles, and shows how resistance values can be embedded directly in the database for
+reuse assessments. The pipeline can be readily adapted to perform design calculations
+according to country-specific National Annexes. The function takes as input the concrete
+and steel strengths, reinforcement areas, effective depths, and partial factors, returning a
+design moment resistance. Although the current PoC only includes an implementation of
+the flexural capacity for beams, the framework is extensible to other checks, including shear,
+torsion, axial-bending interaction, and serviceability verifications. Importantly, this pass
+demonstrates the database's capacity to progress beyond descriptive cataloguing into the
+domain of automated performance estimation.
+In practice, the pipeline relies on manual input during the collection and Core schema,
+particularly for donor building metadata, material specifications, and geometric and
+reinforcement data. By contrast, the automated calculations begin with the Physical
+properties pass and continue through to the Analysis pass, where reproducible and
+standardised methods are applied consistently across the dataset. Semi-automated
+configuration is implemented through YAML mappings, which link database fields to
+specific formulae; this allows practitioners to extend or customise the analysis without
+altering the underlying code.
+In a real-world project setting, this framework should be understood as both a catalogue
+of reclaimed elements and a decision-support environment. At the catalogue level, it
+provides searchable, structured inventories enriched with physical descriptors such as
+weight, dimensions, and material classes. At the decision-support level, it enables
+preliminary feasibility checks in AEC environments. Architects might use the database to
+filter reclaimed slabs by depth, span, or mass, allowing them to sketch layouts that are
+grounded in what is available. Engineers, in turn, may query the computed bending
+capacities to verify whether a stock of beams can reasonably meet the requirements of a
+proposed reuse project. The catalogue thus functions as both inventory and filter, narrowing
+the design space to options that are physically and structurally realistic. It is important to
+note that the outputs are not intended to replace full-scale design verification, but rather
+to supply an automated and standardised baseline for preliminary assessment and
+decision-making.
+37
+
+===== PAGE 43 =====
+Hernández Vargas et al. (2025) Guidelines for a
+database of reclaimed precast concrete elements
+Furthermore, the current database pipeline might, in a sense, function as a foundational
+digital shadow. It represents physical components in a digital form, derived from site-
+acquired data and transformed into analytical attributes via automation. Although this
+may not fulfil the full definition of a digital twin according to certain authors, who consider
+that a DT requires dynamic, real-time interaction between physical and digital
+systems (Kritzinger et al., 2018). However, the database system presented in this report does
+provide the groundwork for more advanced implementations.
+38
+
+===== PAGE 44 =====
+Hernández Vargas et al. (2025) Guidelines for a
+database of reclaimed precast concrete elements
+5. BIM modelling
+Open BIM, understood as the application of open standards and interoperable workflows
+across the design, construction, and operation of buildings, is grounded in the Industry
+Foundation Classes (IFC) standard, as specified in EN ISO 16739-1 (2024). IFC functions as a
+comprehensive and vendor-neutral data model that encodes both the geometry of a
+building and the full set of attributes associated with its components. Beyond the
+representation of individual objects, the schema preserves the relationships and
+dependencies that structure the building as a whole, enabling information to be exchanged
+across diverse software platforms without loss of meaning or integrity.
+However, current industry practices are still dependent on proprietary software
+environments where the source code is not available. Therefore, the development of
+ReCreate Studio (Figure 15) targets Autodesk Revit, one of the major vendors of BIM solutions
+in the industry. This ensures the inclusion of reuse, minimising the friction with current
+practices. In parallel, the development of an experimental pipeline based on ifcOpenShell
+supports the open data standards required for the project.
+Figure 15. Example of the interface of ReCreate Studio in Revit (Mudge, 2024).
+39
+
+===== PAGE 45 =====
+Hernández Vargas et al. (2025) Guidelines for a
+database of reclaimed precast concrete elements
+5.1. ReCreate Studio
+The integration of reused precast concrete components into the design of new buildings
+represents a shift in how structures are conceived and calculated. Since this approach
+lacks a long-standing tradition in the construction industry, it implies a demand for tools
+that can accommodate and streamline unfamiliar processes without forcing practitioners
+to abandon their existing ecosystems.
+Rather than inventing entirely new platforms, the more pragmatic route is to embed circular
+logic into the digital environments architects and engineers already use. ReCreate Studio
+was developed as a prototype plug-in for Autodesk Revit, intended to bring the concept of
+element-by-element reuse into the realm of everyday design practice (Mudge, 2024).
+Written in C#, the add-in operates as a modular class library that connects the relational
+element database to Revit’s graphical environment via its public API (Figure 16).
+Figure 16. Automatic capacity estimations in ReCreate Studio (Mudge, 2024).
+5.2. IFC modelling
+The growing maturity of open-source tools for Building Information Modelling (BIM) has
+opened the door to implementing IFC-based workflows independently of proprietary
+software environments. While IFC is broadly recognised as the standard for data exchange,
+many day-to-day workflows still depend on native file formats tied to closed ecosystems.
+Nonetheless, a shift is underway: tools that treat IFC as a native modelling format are
+increasing in adoption both in practice and research. There, they enable experimental
+40
+
+===== PAGE 46 =====
+Hernández Vargas et al. (2025) Guidelines for a
+database of reclaimed precast concrete elements
+modelling approaches, facilitate reproducible case studies, and support the integration of
+BIM with geospatial systems and heritage documentation, expanding the scope of what
+BIM can represent and preserve.
+ReCreate_IFC_Workflow provides a modular pipeline for translating database entries into
+IFC files, ensuring compatibility with a wide range of workflows through an open and
+software-agnostic format. At the core of this implementation is IfcOpenShell, a flexible
+open-source library written in C++ with Python bindings, purpose-built to handle both high-
+and low-level operations on IFC data structures (IfcOpenShell, 2025). Its geometry
+processing routines are grounded in the ISO 10303-21 specification (ISO, 2016a), which
+defines the syntax and file structure of STEP-based formats used for representing IFC
+models. With a broad set of tools for authoring, parsing, and editing IFC entities, IfcOpenShell
+supports a streamlined, programmable modelling process that integrates seamlessly with
+the rest of the toolchain.
+The library defines a structured workflow for generating IFC-compliant models from the
+individual elements recorded in the database. At the core of this pipeline is the
+ifc_manager.py module, which handles the initialisation of the IFC file and populates it with
+metadata drawn from various relational database tables. The integration of building
+components is coordinated through an abstract base class (ifc_element.py) which
+provides shared methods and attributes common to all element types.
+Four element-specific subclasses (walls, slabs, columns, and beams) extend the abstract
+class by introducing geometry-specific logic tailored to each element type, while
+maintaining a consistent geometric framework as outlined in Section 3.3. In the case of
+slabs, for instance, separate modules distinguish between different typologies, such as
+hollow-core and solid variants, allowing for more accurate parametric representation
+within the IFC schema. The internal class structure of the workflow and the relationships
+between these modules are represented in Figure 17.
+IFCManager IFCElement
+-filename -ifc_class
+-model -name
+-IfcProject
++set_placement
+-site
++assign_to_container
+-building
++add_property_set
+-storey
++setup_ifc_model()
++save()
++add_element
+IFCWall IFCSlab IFCColumn IFCBeam
+-length -slab_type -column_type -beam_type
+-width -length -length -length
+-height -width -width -width
+-voids -height -height -height
+-radius
++add_wall_representation +add_hollow_core_representation +add_beam_representation
++add_void +create_hollow_core_profile +add_column_representation +add_solid_representation
++add_corbel +add_solid_representation +add_solid_representation +add_element_data
++add_element_data +add_element_data
+Figure 17. Class structure for the IFC workflow.
+41
+
+===== PAGE 47 =====
+Hernández Vargas et al. (2025) Guidelines for a
+database of reclaimed precast concrete elements
+To accommodate differing levels of data availability and the required degree of modelling
+detail, the workflow implements two incremental geometric approaches. The first, simplified
+method relies on a volumetric definition derived from the overall dimensions (length, width,
+and height) recorded in the Physical properties schema. Where applicable, this is
+supplemented by a list of voids, allowing for basic prismatic forms with subtractions to be
+captured efficiently. This approach is particularly suited to elements with regular geometry
+and limited documentation.
+The second, more detailed method builds directly on the parametric Cartesian definitions
+found in the Core schema. Here, the geometry is reconstructed from ordered point
+sequences corresponding to each orthographic projection plane (XZ, YZ, and XY). Each
+vertex includes an optional radius parameter to define arcs or fillets, enabling the
+generation of curved profiles or softened edges. Figure 18 illustrates how this information is
+used to represent the geometric form of an element directly from the database entries.
+To reconstruct 3D models from the database, the process can be understood as turning
+each 2D drawing into a volumetric extrusion and then processing them into a single volume.
+The first step is to check the integrity of the data. This is managed by Shapely within the
+database workflow. The second step is to extrude these 2D shapes into 3D space. For this,
+the overall dimensions are computed to extrude each profile in its corresponding normal
+direction. Specifically, the XZ elevation is extruded in the Y direction, the side elevation in the
+YZ plane is extruded in the X direction, and the plan drawing is extruded upwards along the
+Z axis. Once these volumes are created, they are intersected using Constructive Solid
+Geometry (CSG) representation, which is the result of the Boolean intersection of the three
+views.
+Alongside geometry, metadata management is handled through a dedicated submodule
+that parses the relevant database tables and embeds the information as property sets
+(psets) within the IFC file. This step is crucial for maintaining traceability between the model
+and its source data. In the context of the ReCreate project, these psets encapsulate detailed
+donor building attributes, including geographic location, manufacturing facility, year of
+construction, and classification of the element type. Embedding this non-geometric data
+in a structured, queryable format not only preserves provenance but also enables
+downstream applications such as reuse assessment, lifecycle tracking, and semantic
+analysis.
+42
+
+===== PAGE 48 =====
+Hernández Vargas et al. (2025) Guidelines for a
+database of reclaimed precast concrete elements
+X Y Z
+Z
+0 0 0
+Front section 0 0 3480
+3584 0 3480
+(XZ)
+3584 0 0
+0 0 0
+Element Side section 0 0 3480
+0 175 3480
+Profile (YZ) 0 175 0
+Plan 0 0 0
+0 175 0
+(XY) 3584 175 0
+3584 0 0
+592 880 0
+Front section 592 2650 0
+Voids
+(XZ) 2992 2650 0
+2992 880 0
+Side section 0 175 2857
+0 175 3107
+(YZ) 0 325 3107
+0 325 2907
+Y
+0 175 0
+Corbels 0 325 0
+642 325 0
+Plan 657 175 0
+757 175 0
+(XY)
+772 325 0
+2812 325 0
+2827 175 0
+X
+2927 175 0
+2942 325
+3584 325
+3584 175
+Figure 18. Example of geometry reconstruction from WKT records.
+43
+
+===== PAGE 49 =====
+Hernández Vargas et al. (2025) Guidelines for a
+database of reclaimed precast concrete elements
+6. Discussion and concluding
+remarks
+The implementation of a structured element database, aligned with ReCreate’s taxonomy
+and IFC workflows, represents a significant step towards making reclaimed precast
+elements a viable option in contemporary design practice. The digital representation of
+elements enables early-stage reuse scenarios to be modelled and assessed without
+requiring manual redrawing or remeasurement.
+Several limitations remain. Manual data entry is time-consuming, and some historical
+documentation is incomplete or inconsistent. Future work will focus on the semi-automated
+extraction of geometry and reinforcement data from scanned drawings and 3D point
+clouds. Additional work is also needed to verify structural capacity estimation routines and
+to improve the fidelity of IFC exports.
+Overall, this deliverable demonstrates that a common classification scheme and digital
+pipeline can support reuse-oriented workflows at scale. The structured element database
+serves both as a practical tool for designers and as a foundational layer for future reuse
+platforms.
+44
+
+===== PAGE 50 =====
+Hernández Vargas et al. (2025) Guidelines for a
+database of reclaimed precast concrete elements
+References
+Bertin, I., Saadé, M., Le Roy, R., Jaeger, J.-M., & Feraille, A. (2022). Environmental impacts of
+Design for Reuse practices in the building sector. Journal of Cleaner Production, 349,
+131228. https://doi.org/10.1016/j.jclepro.2022.131228
+CEN. (2008). EN 1992-1-1:2005 Eurocode 2: Design of concrete structures—Part 1-1: General
+rules and rules for buildings (Version 1).
+https://www.sis.se/produkter/byggnadsmaterial-och-
+byggnader/byggnadsindustrin/tekniska-aspekter/ssen1992112005/
+Dervishaj, A., & Gudmundsson, K. (2025). Common Data Environment development for reuse
+(D 3.1). The ReCreate Project.
+Hernández Vargas, J., & Stenberg, E. (2024). Building, component, and connector typologies
+of precast concrete building systems. The ReCreate Project.
+Hernández Vargas, J., Stenberg, E., & Kotkavuo, N. (2025). A taxonomy for urban mining of
+precast concrete. The ReCreate Project.
+Honic, M., Kovacic, I., Aschenbrenner, P., & Ragossnig, A. (2021). Material Passports for the
+end-of-life stage of buildings: Challenges and potentials. Journal of Cleaner
+Production, 319, 128702. https://doi.org/10.1016/j.jclepro.2021.128702
+IfcOpenShell. (2025). IfcOpenShell - The Open Source IFC Toolkit and Geometry Engine.
+https://ifcopenshell.org/
+ISO. (2016a). ISO 10303-21:2016 Industrial automation systems and integration—Product
+data representation and exchange—Part 21: Implementation methods: Clear text
+encoding of the exchange structure.
+https://www.sis.se/produkter/produktionsteknik/industriell-
+processtyrning/matning-och-styrning-av-industriella-
+processer/ssiso10303212016/
+ISO. (2016b). ISO/IEC 13249-3:2016 Standard—Information technology—Database
+languages—SQL multimedia and application packages—Part 3: Spatial.
+https://www.sis.se/produkter/informationsteknik-
+kontorsutrustning/programsprak/isoiec1324932016/
+ISO. (2019a). EN ISO 19650-1:2019 Organization and digitization of information about
+buildings and civil engineering works, including building information modelling
+(BIM)—Information management using building information modelling—Part 1:
+Concepts and principles (EN ISO 19650-1:2019).
+https://www.sis.se/produkter/externa-kategorier/98.060/ss-en-iso-19650-120192/
+ISO. (2019b). ISO 19162:2019 Standard—Geographic information—Well-known text
+representation of coordinate reference systems.
+https://www.sis.se/produkter/informationsteknik-
+kontorsutrustning/ittillampningar/it-tillampningar-inom-vetenskap/iso-191622019/
+ISO. (2020). SS-EN ISO 12006-2:2020 Standard—Strukturering av information om
+byggnadsverk—Del 2: Ramverk för klassificering (av information) (ISO 12006-2:2015)
+SS-EN ISO 12006-2:2020 (SS-EN ISO 12006-2; Version 2020).
+45
+
+===== PAGE 51 =====
+Hernández Vargas et al. (2025) Guidelines for a
+database of reclaimed precast concrete elements
+https://www.sis.se/produkter/byggnadsmaterial-och-
+byggnader/byggnadsindustrin/allmant/ss-en-iso-12006-22020/
+ISO. (2024). SS-EN ISO 16739-1:2024 Industry Foundation Classes (IFC) for data sharing in
+the construction and facility management industries—Part 1: Data schema.
+https://www.sis.se/produkter/produktionsteknik/industriell-
+processtyrning/matning-och-styrning-av-industriella-processer/ss-en-iso-
+16739-12024/
+Kritzinger, W., Karner, M., Traar, G., Henjes, J., & Sihn, W. (2018). Digital Twin in manufacturing:
+A categorical literature review and classification. IFAC-PapersOnLine, 51(11), 1016–
+1022. https://doi.org/10.1016/j.ifacol.2018.08.474
+Mudge, F. (2024). ReCreate Studio: Design software for new building structures from a
+database of reused concrete components [EngD Thesis]. Technische Universiteit
+Eindhoven.
+Open Geospatial Consortium. (2011). OpenGIS® Implementation Standard for Geographic
+information—Simple feature access—Part 1: Common architecture (OGC 06-103r4;
+Version 1.21). Open Geospatial Consortium. http://www.opengis.net/doc/is/sfa/1.2.1
+(Corrigendum)
+Räsänen, A., Lahdensivu, J., Gudmundsson, K., Dervishaj, A., Westerlind, H., Lambrects, T.,
+Vullings, M., Arnold, V., & Huuhka, S. (2024). Properties and quality of precast concrete
+elements deconstructed in ReCreate’s pilots. The ReCreate Project.
+Räsänen, A., Lindman, N., Matthews, B., & Lahdensivu, J. (2025). Quality Management: Best
+Practices in Reuse of Precast Concrete Elements. The ReCreate Project.
+SIS. (2024). Standard—Betong – Användning av SS-EN 206:2013+A2:2021 i Sverige SS
+137003:2021+T1:2024. https://www.sis.se/produkter/byggnadsmaterial-och-
+byggnader/byggnadsmaterial/betong-och-betongprodukter/ss-
+1370032021t12024/
+Stenberg, E., Kotkavuo, N., & Hernández Vargas, J. (2025). A digital map of precast concrete
+systems.
+Vullings, M., Wijte, S., Henschel, C., Fischer, J., Huuhka, S., Salmio, E., Räsänen, A., Lahdensivu,
+J., Gudmundsson, K., Stenberg, E., Westerlind, H., & Dervishaj, A. (2024). Real-life
+deconstruction pilots of the ReCreate project. The ReCreate Project.
+Vullings, M., Wijte, S., & Huuhka, S. (2022). Guidelines for a BIM-aided pre-deconstruction
+audit. The ReCreate project. The ReCreate Project.
+https://ec.europa.eu/research/participants/documents/downloadPublic?docume
+ntIds=080166e5f54ee881&appId=PPGMS
+46
+
+===== PAGE 52 =====
+Hernández Vargas et al. (2025) Guidelines for a
+database of reclaimed precast concrete elements
+Annex A
+Additional wall examples
+Figure A1. Prinsenhof A facade element KG03 design.
+47
+
+===== PAGE 53 =====
+Hernández Vargas et al. (2025) Guidelines for a
+database of reclaimed precast concrete elements
+Figure A2. Prinsenhof A facade elements G07 and G10 with zone allocation.
+48
+
+===== PAGE 54 =====
+Hernández Vargas et al. (2025) Guidelines for a
+database of reclaimed precast concrete elements
+.
+Annex B
+Data collection checklists
+Table B1. Pre-collection preparation checklist.
+Item/Action Description
+☐ Collect an inventory identifying all structural precast
+Element inventory
+elements that were reclaimed from deconstruction.
+☐ Collect all available floor plan drawings from the
+Floor Plan drawings
+archives for metadata and taxonomies.
+☐ Cross-sectional designs of elements, including
+Construction drawings
+geometrical and reinforcement detailing.
+☐ Compile any available on-site inspection information
+Inspection data
+that might be used to update original specifications.
+☐ Collect any photos taken before or during
+Element Photos
+deconstruction to link to the element in the database.
+Prepare all of the data collection spreadsheets needed
+☐ Data Collection
+based on the available element types from the
+templates
+deconstruction project.
+49
+
+===== PAGE 55 =====
+Hernández Vargas et al. (2025) Guidelines for a
+database of reclaimed precast concrete elements
+.
+Table B2. Data collection process checklist.
+Item/Action Description
+Fill in the metadata information for the donor building.
+☐ Donor building
+Each project should be a single record in the
+metadata
+spreadsheet.
+Fill in the metadata information for all elements by
+☐
+Element metadata element type. Every element within the deconstruction
+inventory should have one record in the spreadsheet.
+Map the geometry for all unique elements using the
+information in Section 3.3. Start with the global geometry
+☐
+Element geometry coordinates, then the void coordinates (for walls and
+slabs), followed by connection details and corbel details
+(for walls, beams, and columns).
+For walls, if additional non-load-bearing layers are kept
+☐ intact, map the geometry using the same conventions
+Additional panels
+as above in a separate table (sheet), linking the
+information with the element’s product ID.
+Map the longitudinal reinforcement design using the
+systems developed in Section 3.3.2. Only record each
+unique design once, linking the Product ID with the
+☐ Longitudinal Reinforcement ID.
+reinforcement design Fill in the anchorage details for each layer or zone based
+on the available drawings and information.
+Note that all layer coordinates are taken centre-to-
+centre.
+Map the transverse reinforcement design using the
+☐ Transverse
+same reference systems (zones) as the longitudinal
+reinforcement design
+design and the systems developed in Section 3.4.
+50
+
+===== PAGE 56 =====
+Hernández Vargas et al. (2025) Guidelines for a
+database of reclaimed precast concrete elements
+.
+Table B3. Post-collection checklist.
+Item/Action Description
+Check that the data types used for each attribute
+☐ match those specified in Figure 1 and Table 1 to Table
+Check data types
+13. Use the definitions in Section 3 if anything is
+unclear.
+Check that no mandatory data has been missed
+throughout the spreadsheets. Fields left incorrectly
+☐ Check null/not null
+empty will stop the data from being stored within the
+constraints
+RDBMS. Refer to the relevant tables (Table 1 to Table
+13) to view the necessary constraints.
+Several IDs must be unique to satisfy the key
+constraints in the database management system.
+☐ Check for required
+Check the requirements stipulated throughout
+uniqueness
+Chapter 3 and make sure all taxonomies meet the
+necessary guidelines.
+Often in Excel, when clicking and dragging repeated
+values through multiple cells, numbers can
+☐
+Check running numbers incrementally increase, leading to errors in the data.
+Check that no running numbers have been let loose
+throughout the spreadsheets.
+Ensure that all necessary drawings and/or photos are
+☐
+Linked resources linked alongside the data in the RDBMS and are
+supplied with appropriate and clear naming.
+51
